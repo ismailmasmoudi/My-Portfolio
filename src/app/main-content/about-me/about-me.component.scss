@@ -1,0 +1,84 @@
+.purple-shadow {
+    position: absolute;
+    top: 850px;
+    right: 0px;
+    width: 320px;
+    height: 780px;
+    background-color: transparent;
+    z-index: 1;
+}
+
+.about-me-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    left: 100px;
+    position: absolute;
+    top: 1200px;
+    right: 0;
+    padding-bottom: 170px;
+
+
+
+    .graphic-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+
+        .horizontal-line {
+            width: 267px;
+            height: 0;
+            border-top: 4px solid rgba(112, 230, 28, 1);
+            background-color: transparent;
+            z-index: 10;
+        }
+
+        .circle {
+            width: 453px;
+            height: 453px;
+            border-radius: 50%;
+            border: 4px solid rgba(112, 230, 28, 1);
+            background-color: transparent;
+
+
+        }
+
+
+    }
+}
+
+.text-content {
+    width: 471px;
+    height: 532px;
+    display: flex;
+    flex-direction: column; // Ensure items stack vertically
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+
+    .description-container {
+        display: flex;
+        flex-direction: column; // Ensure items stack vertically
+        justify-content: space-between;
+        align-items: center;
+        gap: 24px;
+    }
+
+    img {
+        // Targets all images within .text-content
+        width: 48px;
+        height: 48px;
+        padding: 0 2px;
+        gap: 10px; // Needs display: inline-flex or similar to affect gap
+
+    }
+
+
+
+    .description {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
