@@ -1,41 +1,41 @@
 .my-skills-container {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    right: 0;
-    top: 1800px;
-    position: absolute;
+    align-items: baseline;
+    height: 404px;
     padding: 170px 0;
-    left: 100px;
+    margin-left: 100px;
+    background-color: transparent;
+
+
 
     .images-container {
 
         display: flex;
-        gap: 57px;
+        gap: 26px;
         width: 664px;
         height: 404px;
         flex-wrap: wrap;
-
-        img {
-            width: 88px;
-            height: 97px; // Use 'auto' if you want height based on image aspect ratio
-        }
+        background-color: transparent;
+        z-index: 10;
     }
 
     .skills-description {
         width: 571px;
-        height: 400px;
+        height: 100%;
         display: flex;
-        justify-content: space-between;
         text-align: right;
-        gap: 32px;
+        gap: 33px;
+        background-color: transparent;
 
         .text-button-container {
             height: 100%;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            /* justify-content: space-between; */
             align-items: flex-end;
+            background-color: transparent;
+            gap: 24px;
 
             h1 {
                 text-align: right;
@@ -49,30 +49,63 @@
                 text-align: right;
             }
 
+            .text-container {
+                width: 471px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: flex-end;
+                background-color: transparent;
+                gap: 40px
+            }
+
+            .second-text-container-with-button {
+                width: 410px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: flex-end;
+                background-color: transparent;
+                gap: 40px
+            }
+
+            .text-container-without-button {
+                width: 410px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: flex-end;
+                background-color: transparent;
+                gap: 16px
+            }
+
             button {
-                width: 200px;
-                height: 58px;
+
+                padding: 15px 30px;
                 border-radius: 10px;
                 background-color: #70E61C;
                 box-shadow: 4px 4px 4px 0px #00000040;
                 color: #fff;
-                border: none;
-                cursor: pointer;
-                opacity: 1;
-                transition: opacity 0.3s ease;
+                border: none; // Remove default button border
+                cursor: pointer; // Add pointer cursor on hover
+                opacity: 1; // Ensure button is visible!
+                transition: opacity 0.3s ease; // Add a smooth transition for hover effect
                 font-size: 23px;
-                font-weight: 400;
-                line-height: 27.6px;
-                text-align: left;
-                padding: 15px 30px;
-                gap: 10px; // Gap won't work unless the button has internal flex children.
-                border-radius: 10px;
-
+                transition: all 100ms ease-in-out;
 
                 &:hover {
-                    opacity: 0.8;
+                    padding: 20px 40px;
+                    background-color: rgba(151, 71, 255, 1);
+                    color: #fff;
+                }
+
+                &:active {
+                    padding: 15px 30px;
+                    color: black;
+                    background-color: white;
                 }
             }
+
         }
 
         .horizontal-line {
@@ -80,17 +113,16 @@
             height: 0px;
             border-top: 4px solid rgba(151, 71, 255, 1);
             margin-top: 55px;
-
         }
     }
 }
 
 .green-shadow {
     position: absolute;
-    top: 1400px;
+    top: 2150px;
     left: 0px;
     width: 320px;
-    height: 780px;
+    height: 1300px;
     background-color: transparent;
     z-index: 1;
 }
@@ -100,19 +132,85 @@
     display: inline-flex;
     /* or inline-block */
     align-items: baseline; // keep them on the baseline
-    gap: 10px;
+    gap: 2px;
+    background-color: transparent;
+
     .heading-style {
-        // apply common h2 styles here
         font-size: 32px;
         font-weight: 700;
         line-height: 38.4px;
         text-align: left;
         margin: 0; // important! remove margin
         color: #fff;
+        background-color: transparent;
+
     }
 
     .purple-color {
         color: rgba(151, 71, 255, 1);
 
+    }
+}
+
+
+
+.skills-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 88px;
+    gap: 10px;
+    transition: gap 200ms ease-in 180ms;
+    background-color: transparent;
+    padding-top: 12px;
+    padding-right: 14px;
+    padding-left: 14px;
+
+    img {
+        height: 60px;
+        width: 60px;
+        transition: transform 200ms ease-in 180ms;
+        background-color: transparent;
+    }
+
+
+    &:hover {
+
+        img {
+            transform: translateY(-12px); // Move image up by 12px on hover
+        }
+
+        gap: 10px; // Reset the gap on hover, required for positioning the span as desired
+    }
+
+
+    .purple-color {
+        color: rgba(151, 71, 255, 1) !important;
+    }
+
+
+    span {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 19.2px;
+        text-align: center;
+        color: #fff;
+        background-color: transparent;
+
+
+    }
+
+
+}
+
+.skills-image:nth-of-type(11) {
+
+    /* Targets the 11th .skills-image element*/
+    &:hover {
+        span {
+
+            color: #fff !important;
+        }
     }
 }

@@ -1,0 +1,101 @@
+.portfolio-container {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    .portfolio-title {
+        display: flex;
+        align-items: center;
+        gap: 32px;
+        justify-content: flex-end;
+
+        .portfolio-text {
+            font-size: 90px;
+            font-weight: 700;
+            line-height: 108px;
+            text-align: center;
+            color: white; // Or rgba(255, 255, 255, 1)
+        }
+
+        .horizontal-line {
+            border-top: 4px solid rgba(151, 71, 255, 1);
+            height: 0;
+
+            &.right-line {
+                width: 507px;
+            }
+
+            &.left-line {
+                width: 100px;
+            }
+        }
+    }
+
+    .portfolio-text {
+        text-align: center;
+    }
+
+    .project-item {
+        display: flex;
+        justify-content: space-between;
+        gap: 35px;
+
+        .project-image {
+            width: 620px;
+            height: 339px;
+        }
+
+        .project-details {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 35px;
+
+            .project-description {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .project-buttons {
+                display: flex;
+                gap: 10px; // space between buttons
+
+                button {
+                    font-size: 23px;
+                    font-weight: 400;
+                    line-height: 27.6px;
+                    color: white;
+                    padding: 15px 30px;
+                    border-radius: 10px 0 0 0;
+
+
+                    &.primary-button {
+                        width: 152px;
+                        height: 58px;
+                        background-color: rgba(151, 71, 255, 1);
+                    }
+
+                    &.secondary-button {
+                        width: 137px;
+                        height: 58px;
+                        border: 1px solid rgba(112, 230, 28, 1);
+                    }
+
+
+                    &:hover {
+                        background-color: rgba(112, 230, 28, 1);
+                        color: white; // ensure text stays readable on hover
+                    }
+
+
+                    &:active {
+                        transition: none; // Remove transition on click for instant effect.
+                        background-color: white;
+                        color: rgba(112, 230, 28, 1);
+                    }
+                }
+            }
+        }
+    }
+}
