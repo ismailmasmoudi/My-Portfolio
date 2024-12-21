@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column;
     gap: 32px;
+    margin-left: 100px;
 
     .portfolio-title {
         display: flex;
@@ -35,26 +36,57 @@
         text-align: center;
     }
 
+
+}
+
+.project-containter {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 35px;
+    margin-right: 100px;
+  
     .project-item {
         display: flex;
         justify-content: space-between;
         gap: 35px;
-
-        .project-image {
-            width: 620px;
-            height: 339px;
+        height: 339px;
+        background-color: transparent;
+       
+        h3 {
+            color: rgba(112, 230, 28, 1);
         }
 
+        h2 {
+            color: rgba(151, 71, 255, 1);
+        }
+
+        .project-image {
+            height: 100%;
+            width: 364px;
+            padding: 0px 129px;
+            z-index: 10;
+            background-color: transparent;
+        }
+        .project-left{
+            align-items: flex-end !important;
+            p{
+                text-align: end;
+            }
+        }
         .project-details {
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
             gap: 35px;
-
+            justify-content: center;
+            max-width: 513px;
+            padding-top: 35px;
+         
             .project-description {
                 display: flex;
                 flex-direction: column;
                 gap: 15px;
+               
             }
 
             .project-buttons {
@@ -66,17 +98,18 @@
                     font-weight: 400;
                     line-height: 27.6px;
                     color: white;
-                    padding: 15px 30px;
-                    border-radius: 10px 0 0 0;
-
+                    border-radius: 10px;
+                    cursor: pointer;
 
                     &.primary-button {
                         width: 152px;
                         height: 58px;
                         background-color: rgba(151, 71, 255, 1);
+                        border: none;
                     }
 
                     &.secondary-button {
+                        padding: 15px 30px;
                         width: 137px;
                         height: 58px;
                         border: 1px solid rgba(112, 230, 28, 1);
@@ -85,7 +118,8 @@
 
                     &:hover {
                         background-color: rgba(112, 230, 28, 1);
-                        color: white; // ensure text stays readable on hover
+                        color: white; 
+                        border: none;
                     }
 
 
@@ -98,4 +132,15 @@
             }
         }
     }
+}
+
+
+.purple-shadow {
+    position: absolute;
+    top: 3089px;
+    left: 0px;
+    width: 500px;
+    height: 890px;
+    background-color: transparent;
+    z-index: 1;
 }

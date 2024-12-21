@@ -1,0 +1,95 @@
+footer {
+    margin-top: 400px;
+    z-index: 1000;
+    height: 254px;
+    padding: 37px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #141D2F;
+    border-top: 4px solid rgba(112, 230, 28, 1);
+    
+    .footer-name {
+        margin: 0;
+        color: #ffff;
+    }
+
+    .footer-left {
+       
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+       
+
+
+        a {
+            color: #ffff;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 19.2px;
+            text-align: left;
+            text-decoration: none;
+
+            &.clicked {
+                // Styles for the clicked state
+                font-size: 23px;
+                font-weight: 400;
+                line-height: 27.6px;
+                text-align: left;
+                text-underline-position: from-font;
+                text-decoration-skip-ink: none;
+                color: rgba(112, 230, 28, 1);
+            }
+
+            &:hover {
+                color: #70e61c;
+            }
+        }
+
+    }
+
+
+    .icons {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 174px;
+        background-color: transparent;
+        cursor: pointer;
+
+        img {
+            width: 30px;
+            height: 30px;
+            background-color: transparent;
+            transition: all 100ms ease-out;
+
+            &:hover {
+                width: 40px;
+                height: 40px;
+            }
+        }
+        a {
+            text-decoration: none;
+            background-color: transparent;
+            width: 30px;
+            height: 30px;
+        }
+    }
+
+    h3{
+        color: #ffff;
+    }
+
+
+}
+
+.purple-shadow{
+    position: absolute;
+    bottom: 300px;
+    left: 0px;
+    width: 500px;
+    height: 890px;
+    background-color: transparent;
+    z-index: 1;
+}
