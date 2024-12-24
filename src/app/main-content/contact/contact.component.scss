@@ -1,39 +1,162 @@
-input[type=text], select, textarea {
-    width: 100%; /* Full width */
-    padding: 12px; /* Some padding */ 
-    border: 1px solid #ccc; /* Gray border */
-    border-radius: 4px; /* Rounded borders */
-    box-sizing: border-box; /* Make sure that padding and width stays in place */
-    margin-top: 6px; /* Add a top margin */
-    margin-bottom: 16px; /* Bottom margin */
-    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+// input[type=text], select, textarea {
+//     width: 100%; /* Full width */
+//     padding: 12px; /* Some padding */ 
+//     border: 1px solid #ccc; /* Gray border */
+//     border-radius: 4px; /* Rounded borders */
+//     box-sizing: border-box; /* Make sure that padding and width stays in place */
+//     margin-top: 6px; /* Add a top margin */
+//     margin-bottom: 16px; /* Bottom margin */
+//     resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+//   }
+
+//   /* Style the submit button with a specific background color etc */
+//   input[type=submit] {
+//     background-color: #04AA6D;
+//     color: white;
+//     padding: 12px 20px;
+//     border: none;
+//     border-radius: 4px;
+//     cursor: pointer;
+//   }
+
+//   /* When moving the mouse over the submit button, add a darker green color */
+//   input[type=submit]:hover {
+//     background-color: #45a049;
+//   }
+
+/* Add a background color and some padding around the form */
+.container-right {
+  border-radius: 5px;
+  background-color: transparent;
+  padding: 20px;
+  max-width: 617px;
+  gap: 32px;
+
+  form {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    gap: 32px;
+
   }
-  
-  /* Style the submit button with a specific background color etc */
-  input[type=submit] {
-    background-color: #04AA6D;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  /* When moving the mouse over the submit button, add a darker green color */
-  input[type=submit]:hover {
-    background-color: #45a049;
-  }
-  
-  /* Add a background color and some padding around the form */
-  .container {
-    border-radius: 5px;
-    background-color: #f2f2f2;
-    padding: 20px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: left;
+  max-width: 474px;
+
+  gap: 24px;
+
+  h2 {
+    color: #fff;
   }
 
-  .contact-form{
+  .details-container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
+    align-items: left;
+    gap: 16px;
   }
+}
+
+.input-container,
+.textarea-container {
+  position: relative;
+  display: block;
+  background: rgba(20, 29, 47, 1);
+
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    &::placeholder { /* Targets the placeholder text */
+      color: #fff;
+    }
+
+    &:hover { /* Hover effect for input and textarea */
+      border: 1px solid rgba(112, 230, 28, 1);
+    }
+    &:focus{
+            border: 1px solid rgba(112, 230, 28, 1);
+
+    }
+  }}
+
+input[type="text"],
+input[type="email"] {
+  width: 617px;
+  height: 50px;
+  padding: 15px 25px;
+  border-radius: 10px;
+  background: rgba(20, 29, 47, 1);
+  border: 1px solid rgba(151, 71, 255, 1);
+  box-sizing: border-box;
+  /* Include padding and border in element's total width and height */
+  color: #fff;
+
+}
+
+
+textarea {
+  width: 617px;
+  height: 202px;
+  padding: 15px 25px;
+  border-radius: 10px;
+  background: rgba(20, 29, 47, 1);
+  border: 1px solid rgba(151, 71, 255, 1);
+  box-sizing: border-box;
+  color: #fff;
+
+}
+
+.input-container input,
+.textarea-container textarea {
+  box-sizing: border-box;
+}
+
+.input-container img {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.textarea-container img {
+  position: absolute;
+  top: 10%;
+  right: 15px;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.valid {
+  border: 1px solid rgba(112, 230, 28, 1) !important;
+}
+
+.invalid {
+  border: 1px solid rgba(230, 28, 64, 1) !important;
+}
+
+
+.error-message {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16.8px;
+  text-align: left;
+  color: rgba(230, 28, 64, 1);
+  display: block;
+  /* Ensure it takes full width */
+  margin-top: 5px;
+  /* Add some spacing between input and error message */
+}
