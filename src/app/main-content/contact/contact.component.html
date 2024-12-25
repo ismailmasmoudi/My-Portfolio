@@ -21,12 +21,17 @@
       <textarea #message="ngModel" minlength="4"  [(ngModel)]="contactData.message"  id="message" name="message" placeholder="Write something.." style="height:200px" required ></textarea>
          @if(!message.valid && message.touched ){
             <span>Message is required</span>
-        } -->
-<!-- <input type="submit" value="Submit">
+        } 
+ <input type="submit" value="Submit">
   
     </form>
   </div>
 </div> -->
+
+<div class="contact-title">
+  <div class="horizontal-line left-line"></div>
+  <h1 class="contact-text">Contact</h1>
+</div>
 
 <div class="contact-form">
   <div class="container-left">
@@ -38,45 +43,81 @@
   </div>
   <div class="container-right">
     <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
-
+      <div class="input-container-error-message">
       <div class="input-container">
-        <input [(ngModel)]="contactData.name" type="text" id="name" name="name" placeholder="Your name.." required
+        <input [(ngModel)]="contactData.name" minlength="3" type="text" id="name" name="name" pattern="^[a-zA-Z]+$" placeholder="Your name.." required
           #nameInput="ngModel" [ngClass]="{
             'valid': nameInput.valid && nameInput.touched,
             'invalid': nameInput.invalid && nameInput.touched
-          }"updateOn="blur" (ngModelChange)="validateForm()"/>
+          }" updateOn="blur" (ngModelChange)="validateForm()" />
         <img *ngIf="nameInput.valid && nameInput.touched" src="img/right.svg" width="25" height="25">
         <img *ngIf="nameInput.invalid && nameInput.touched" src="img/false.svg" width="25" height="25">
 
       </div>
       <span *ngIf="nameInput.invalid && nameInput.touched" class="error-message">Your name is required</span>
+    </div>
 
+<div class="input-container-error-message">
 
-      <div class="input-container">
-        <input [(ngModel)]="contactData.email" type="email" id="email" name="email" placeholder="Your Email.." required
-          pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" #emailInput="ngModel" [ngClass]="{
-            'valid': emailInput.valid && emailInput.touched,
-            'invalid': emailInput.invalid && emailInput.touched
-          }"  updateOn="blur" (ngModelChange)="validateForm()"/>
-        <img *ngIf="emailInput.valid && emailInput.touched" src="img/right.svg" width="25" height="25">
-        <img *ngIf="emailInput.invalid && emailInput.touched" src="img/false.svg" width="25" height="25">
+  <div class="input-container">
+    <input [(ngModel)]="contactData.email" type="email" id="email" name="email" placeholder="Your Email.." required
+      pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" #emailInput="ngModel" [ngClass]="{
+        'valid': emailInput.valid && emailInput.touched,
+        'invalid': emailInput.invalid && emailInput.touched
+      }" updateOn="blur" (ngModelChange)="validateForm()" />
+    <img *ngIf="emailInput.valid && emailInput.touched" src="img/right.svg" width="25" height="25">
+    <img *ngIf="emailInput.invalid && emailInput.touched" src="img/false.svg" width="25" height="25">
 
-      </div>
-      <span *ngIf="emailInput.invalid && emailInput.touched" class="error-message">Your Email is required</span>
+  </div>
+  <span *ngIf="emailInput.invalid && emailInput.touched" class="error-message">Your Email is required</span>
+</div>
 
+      <div class="textarea-container-error-message">
       <div class="textarea-container">
-        <textarea #message="ngModel" minlength="4" [(ngModel)]="contactData.message" id="message" name="message"
+        <textarea #message="ngModel" minlength="10" [(ngModel)]="contactData.message" id="message" name="message"
           placeholder="Your Message.." required [ngClass]="{
             'valid': message.valid && message.touched,
             'invalid': message.invalid && message.touched
-          }"  updateOn="blur" (ngModelChange)="validateForm()"></textarea>
+          }" updateOn="blur" (ngModelChange)="validateForm()"></textarea>
         <img *ngIf="message.valid && message.touched" src="img/right.svg" width="25" height="25">
         <img *ngIf="message.invalid && message.touched" src="img/false.svg" width="25" height="25">
 
       </div>
       <span *ngIf="message.invalid && message.touched" class="error-message">Your message is empty</span>
-      <input type="submit" value="Submit" [disabled]="!contactForm.valid">
+    </div>
+      <!-- <input type="submit" value="Submit" [disabled]="!contactForm.valid"> -->
+     <div class="checkbox-and-privacyagreement">
 
+      <div class="checkbox-container">
+        <img [src]="checkboxImageUrl"
+             (click)="togglePrivacyAgreement()"
+             (mouseenter)="checkboxHover = true; updateCheckboxImage()"  
+             (mouseleave)="checkboxHover = false; updateCheckboxImage()" 
+             alt="Privacy Agreement Checkbox"
+             style="cursor: pointer;">
+        
+        
+         <p>I've read the <a href="your-privacy-policy-url" target="_blank" style="color: #9747FF; text-decoration: none; cursor: pointer;">privacy policy</a> and agree to the processing of my data as outlined.</p>
+  
+        </div>
+        <span *ngIf="!privacyAgreementChecked" class="error-message" style="color: rgba(230, 28, 64, 1)">
+        Please accept the privacy policy.
+        </span>
+      </div>
+      <div class="span-button-container">
+   
+    <button type="submit"
+               [disabled]="!contactForm.valid"
+               [style.background-color]="contactForm.valid ? 'rgba(112, 230, 28, 1)' : 'rgba(182, 182, 182, 1)'"
+              >
+         Send Message 
+    </button>
+  </div>
+    
     </form>
   </div>
 </div>
+<div class="go-up" (click)="scrollToTop()">
+  <img [src]="imageUrl" (mouseenter)="imageUrl = 'img/Go-up-button-green.svg'" (mouseleave)="imageUrl = 'img/Go-up-button.svg'" alt="">
+</div>
+

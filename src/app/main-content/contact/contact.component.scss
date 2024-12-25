@@ -28,24 +28,106 @@
 .container-right {
   border-radius: 5px;
   background-color: transparent;
-  padding: 20px;
   max-width: 617px;
-  gap: 32px;
+
+  .checkbox-and-privacyagreement {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 16px;
+
+    .span-button-container {
+      display: flex;
+      flex-direction: column;
+    }
+
+    
+    .checkbox-container {
+      display: flex;
+      gap: 8px;
+
+      img {
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      p {
+        color: #fff;
+
+        a {
+          color: #9747FF;
+          text-decoration: none;
+          cursor: pointer;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
 
   form {
     display: flex;
     justify-content: space-around;
     flex-direction: column;
-    gap: 32px;
 
+
+  }
+
+
+}
+
+.span-button-container{
+  display: flex;
+  justify-content: center;
+  button {
+    width: 253px;
+    height: 58px;
+    padding: 15px 30px;
+    gap: 10px;
+    border-radius: 10px;
+    border: none;
+    color: #fff;
+    font-size: 23px;
+    cursor: pointer;
+  }
+}
+
+
+.contact-title {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  margin-top: 170px;
+  margin-bottom: 32px;
+  z-index: 10;
+
+  .horizontal-line {
+    border-top: 4px solid rgba(151, 71, 255, 1);
+    height: 0;
+
+    &.left-line {
+      width: 535px;
+    }
+  }
+
+  .contact-text {
+    text-align: center;
   }
 }
 
 .contact-form {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-between;
-  align-items: center;
+  align-items: start;
+  margin: 0 100px;
+  height: 508px;
+
 }
 
 .container-left {
@@ -54,7 +136,6 @@
   justify-content: space-between;
   align-items: left;
   max-width: 474px;
-
   gap: 24px;
 
   h2 {
@@ -70,93 +151,103 @@
   }
 }
 
+.textarea-container-error-message {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 5px;
+  height: 220px;
+}
+
+.input-container-error-message {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 5px;
+  height: 72px;
+  margin-bottom: 10px;
+}
+
 .input-container,
 .textarea-container {
   position: relative;
   display: block;
   background: rgba(20, 29, 47, 1);
+  width: 617px;
 
-  input[type="text"],
-  input[type="email"],
+  input,
   textarea {
-    &::placeholder { /* Targets the placeholder text */
+    width: 100%;
+    padding: 15px 25px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    color: #fff;
+    border: 1px solid rgba(151, 71, 255, 1);
+    background-color: rgba(20, 29, 47, 1);
+
+    &::placeholder {
       color: #fff;
     }
 
-    &:hover { /* Hover effect for input and textarea */
+
+    &.valid {
       border: 1px solid rgba(112, 230, 28, 1);
     }
-    &:focus{
-            border: 1px solid rgba(112, 230, 28, 1);
 
+    &.invalid {
+      border: 1px solid rgba(230, 28, 64, 1);
     }
-  }}
+
+
+    &:hover,
+    &:focus {
+      border: 1px solid rgba(112, 230, 28, 1);
+    }
+
+  }
+
+  img {
+    /* For validation icons */
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    pointer-events: none;
+  }
+}
 
 input[type="text"],
 input[type="email"] {
-  width: 617px;
-  height: 50px;
-  padding: 15px 25px;
-  border-radius: 10px;
-  background: rgba(20, 29, 47, 1);
-  border: 1px solid rgba(151, 71, 255, 1);
-  box-sizing: border-box;
-  /* Include padding and border in element's total width and height */
-  color: #fff;
-
+  height: 50px
 }
 
+.textarea-container {
 
-textarea {
-  width: 617px;
-  height: 202px;
-  padding: 15px 25px;
-  border-radius: 10px;
-  background: rgba(20, 29, 47, 1);
-  border: 1px solid rgba(151, 71, 255, 1);
-  box-sizing: border-box;
-  color: #fff;
+  textarea {
+    height: 202px;
+  }
 
+  img {
+    top: 14% !important;
+  }
 }
-
-.input-container input,
-.textarea-container textarea {
-  box-sizing: border-box;
-}
-
-.input-container img {
-  position: absolute;
-  top: 50%;
-  right: 15px;
-  transform: translateY(-50%);
-  pointer-events: none;
-}
-
-.textarea-container img {
-  position: absolute;
-  top: 10%;
-  right: 15px;
-  transform: translateY(-50%);
-  pointer-events: none;
-}
-
-.valid {
-  border: 1px solid rgba(112, 230, 28, 1) !important;
-}
-
-.invalid {
-  border: 1px solid rgba(230, 28, 64, 1) !important;
-}
-
 
 .error-message {
   font-size: 14px;
   font-weight: 400;
-  line-height: 16.8px;
+  line-height: 1.2;
   text-align: left;
   color: rgba(230, 28, 64, 1);
   display: block;
-  /* Ensure it takes full width */
-  margin-top: 5px;
-  /* Add some spacing between input and error message */
+}
+
+.go-up {
+  display: flex;
+  margin-right: 100px;
+  margin-top: 50px;
+  justify-content: flex-end;
+
+  img {
+    cursor: pointer;
+  }
 }
