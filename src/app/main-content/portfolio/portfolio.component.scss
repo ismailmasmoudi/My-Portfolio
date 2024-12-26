@@ -3,6 +3,7 @@
     flex-direction: column;
     gap: 32px;
     margin-left: 100px;
+    padding-top: 170px;
 
     .portfolio-title {
         display: flex;
@@ -137,10 +138,11 @@
 
 .purple-shadow {
     position: absolute;
-    top: 3089px;
-    left: 0px;
+    top: 2890px;
+    right: 0;
     width: 500px;
-    height: 835px;
+    height: 678px;
+    transform: rotate(180deg);
     background-color: transparent;
     z-index: 1;
 }

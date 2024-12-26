@@ -11,7 +11,7 @@
 .footer-container {
     margin-top: 100px;
     z-index: 1000;
-    height: 254px;
+    height: 213px;
     padding: 37px 100px;
     display: flex;
     justify-content: space-between;
@@ -41,24 +41,25 @@
             line-height: 19.2px;
             text-align: left;
             text-decoration: none;
-
-            &.clicked {
-                // Styles for the clicked state
-                font-size: 23px;
-                font-weight: 400;
-                line-height: 27.6px;
-                text-align: left;
-                text-underline-position: from-font;
-                text-decoration-skip-ink: none;
-                color: rgba(112, 230, 28, 1);
+            position: relative;
+            &::before { // Creates the line
+                content: "";
+                position: absolute;
+                bottom: -5px; // Adjust position relative to text
+                left: 0;
+                transform: translateX(0); // Center the line
+                width: 0; // Initially hidden
+                height: 2px;
+                background-color: #70E61C;
+                transition: width 0.3s ease; // Smooth transition effect
+              }
+          
+              &:hover::before {
+                width: 55.5px; // Show the line on hover
+              }
             }
-
-            &:hover {
-                color: #70e61c;
-            }
-        }
-
-    }
+          }
+    
 
 
     .icons {
@@ -101,7 +102,7 @@
     bottom: 0;
     left: 0px;
     width: 650px;
-    height: 950px;
+    height: 900px;
     background-color: transparent;
     z-index: 0;
 }

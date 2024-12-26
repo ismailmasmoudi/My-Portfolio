@@ -38,52 +38,60 @@
     gap: 12px;
     margin-bottom: 16px;
 
-    .span-button-container {
-      display: flex;
-      flex-direction: column;
-    }
-
-    
-    .checkbox-container {
-      display: flex;
-      gap: 8px;
-
-      img {
-        &:hover {
-          cursor: pointer;
-        }
-      }
-
-      p {
-        color: #fff;
-
-        a {
-          color: #9747FF;
-          text-decoration: none;
-          cursor: pointer;
-
-          &:hover {
-            text-decoration: underline;
-          }
-        }
-      }
-    }
   }
 
-  form {
+  .span-button-container {
     display: flex;
-    justify-content: space-around;
     flex-direction: column;
-
-
   }
+
+
+  .checkbox-container {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+    height: 25px;
+
+    img {
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    p {
+      color: #fff;
+      font-size: 14px !important;
+
+      a {
+        color: #9747FF;
+        text-decoration: none;
+        cursor: pointer;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+form {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
 
 
 }
 
-.span-button-container{
+
+
+
+.span-button-container {
   display: flex;
   justify-content: center;
+  align-items: center;
+
   button {
     width: 253px;
     height: 58px;
@@ -102,7 +110,7 @@
   display: flex;
   align-items: center;
   gap: 32px;
-  margin-top: 170px;
+  padding-top: 170px;
   margin-bottom: 32px;
   z-index: 10;
 
@@ -126,8 +134,43 @@
   justify-content: space-between;
   align-items: start;
   margin: 0 100px;
-  height: 508px;
+  height: 533px;
 
+  .input-container-error-message {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 5px;
+    height: 72px;
+    margin-bottom: 10px;
+  }
+
+  .name-input-container-error-message {
+    // New class for name input
+    @extend .input-container-error-message; // Inherit styles
+
+    .error-message.min-length {
+      // New class for the specific min-length error
+      display: block; // Ensure it's visible by default
+    }
+  }
+
+  .textarea-container-error-message {
+    display: flex;
+    flex-direction: column;
+    height: 231px;
+  }
+
+  .message-textarea-container-error-message {
+    // New for message textarea
+    @extend .textarea-container-error-message; // Inherit styles
+
+    .error-message.min-length {
+      // New class for specific min-length error
+      display: block;
+    }
+
+  }
 }
 
 .container-left {
@@ -151,22 +194,9 @@
   }
 }
 
-.textarea-container-error-message {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  gap: 5px;
-  height: 220px;
-}
 
-.input-container-error-message {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  gap: 5px;
-  height: 72px;
-  margin-bottom: 10px;
-}
+
+
 
 .input-container,
 .textarea-container {
@@ -200,7 +230,8 @@
 
 
     &:hover,
-    &:focus {
+    &:focus,
+    &:active {
       border: 1px solid rgba(112, 230, 28, 1);
     }
 
@@ -249,5 +280,55 @@ input[type="email"] {
 
   img {
     cursor: pointer;
+  }
+}
+
+.confirmation-layer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  .confirmation-content {
+    border: 4px solid rgb(112, 230, 28);
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    animation: slideIn 1s ease-in-out;
+
+    h2 {
+      color: #70E61C;
+    }
+
+
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+
+  50% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
   }
 }

@@ -14,6 +14,7 @@ export class ContactComponent implements OnInit {
   privacyAgreementChecked = false;
   checkboxHover = false;
   checkboxImageUrl = 'img/Check-button.svg';
+  showConfirmationLayer = false;
 
   @ViewChild('contactForm') contactForm!: NgForm;
 
@@ -42,8 +43,6 @@ export class ContactComponent implements OnInit {
     this.privacyAgreementChecked = !this.privacyAgreementChecked;
     this.updateCheckboxImage(); // Update image after click
   }
-
-
 
   updateCheckboxImage() {  // Renamed for clarity
     if (this.privacyAgreementChecked) {
@@ -80,35 +79,40 @@ export class ContactComponent implements OnInit {
 
   onSubmit(ngForm: NgForm) {
     if (!this.privacyAgreementChecked) {
-
       this.validateForm();
       return;
     }
 
-    if (ngForm !== this.contactForm) return;
-    if (ngForm.valid && !this.mailTest) {
-      this.http
-        .post(this.post.endPoint, this.post.body(this.contactData), this.post.options) // Add options
-        .subscribe({
-          next: (response) => {
-            console.log("Response from server:", response);
-            ngForm.resetForm();
-            this.privacyAgreementChecked = false;
-          },
-          error: (error) => {
-            console.error(error);
-            // Display error messages
-            alert("Failed to send email. Please try again.");
-          },
-        });
-    } else if (ngForm.valid && this.mailTest) {
-      console.log('Test mode: Form submitted', this.contactData);
-      ngForm.resetForm();
-      this.privacyAgreementChecked = false;
+    if (ngForm.valid) { // Simplified condition – checkbox is already checked
+        if(!this.mailTest) {
+            this.http.post(this.post.endPoint, this.post.body(this.contactData), this.post.options)
+            .subscribe({
+                next: (response) => {
+                console.log("Response from server:", response);
+                this.showConfirmation(); // Show confirmation layer
+                },
+                error: (error) => {
+                    console.error(error);
+                    alert("Failed to send email. Please try again.");
+                },
+            });
+        } else {
+            console.log('Test mode: Form submitted', this.contactData);
+            this.showConfirmation();
+        }
     } else {
-      this.validateForm();
-
+        this.validateForm();
     }
+
   }
+
+
+  showConfirmation() {
+    this.showConfirmationLayer = true;
+    setTimeout(() => {
+      window.location.reload(); // Refresh the page after a delay
+    }, 1500); // Adjust delay as needed
+  }
+
 }
 

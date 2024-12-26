@@ -17,7 +17,7 @@
         align-items: center;
         height: 290px;
         position: absolute;
-        top: 400px;
+        top: 300px;
         width: 724px;
         right: 100px;
         z-index: 1;
@@ -62,10 +62,10 @@
 
         img {
             position: absolute;
-            top: 432px;
+            top: 431px;
             left: -2px;
             width: 100%;
-            height: 1078px;
+            height: 800px;
             display: block;
             background-color: transparent;
         }
@@ -77,7 +77,7 @@
     display: flex;
     position: relative;
     height: 172px;
-    width: 765px;
+    width: max-content;
     align-items: center;
     background-color: transparent;
 
@@ -99,22 +99,22 @@
     }
 
     .title-right {
-        text-align: center; // Align text within title-right to the right
+        text-align: center;
         background-color: transparent;
+        margin-top: 0;
 
         p:nth-child(1) {
             font-family: Poppins;
-            font-size: 70px;
+            font-size: 65px;
             font-weight: 700;
             line-height: 108px;
             color: #FFFFFF;
-            margin-bottom: 0px; // Space between name and title,
+            margin-bottom: 0px;
             white-space: nowrap;
         }
 
         p:nth-child(2) {
-            // "FRONTEND DEVELOPER"
-            font-size: 58px;
+            font-size: 54px;
             font-weight: 400;
             line-height: 69.6px;
             color: #9747FF;
@@ -127,8 +127,8 @@
 
     img:nth-child(1) {
         display: block;
-        width: 1000px;
-        height: 800px;
+        width: 912px;
+        height: 770px;
         background-color: transparent;
     }
 
@@ -136,8 +136,8 @@
         position: absolute;
         top: 40px;
         left: 100px;
-        width: 646px;
-        height: 705px;
+        width: 580px;
+        height: 661px;
         z-index: 1;
         display: block;
         background-color: transparent;
@@ -148,7 +148,7 @@
 
 .contact-bar {
     position: absolute;
-    top: 1000px;
+    top: 872px;
     left: 0px;
     display: flex;
     height: 40px;
