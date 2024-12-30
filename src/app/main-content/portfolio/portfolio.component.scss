@@ -56,10 +56,12 @@
        
         h3 {
             color: rgba(112, 230, 28, 1);
+            background-color: transparent;
         }
 
         h2 {
             color: rgba(151, 71, 255, 1);
+            background-color: transparent;
         }
 
         .project-image {
@@ -82,18 +84,23 @@
             justify-content: center;
             max-width: 513px;
             padding-top: 35px;
-         
+            z-index: 10;
+            background-color: transparent;
+
             .project-description {
                 display: flex;
                 flex-direction: column;
                 gap: 15px;
-               
+                background-color: transparent;
+                p{
+                    background-color: transparent;
+                }
             }
 
             .project-buttons {
                 display: flex;
                 gap: 86px; // space between buttons
-
+                background-color: transparent;
                 button {
                     font-size: 23px;
                     font-weight: 400;

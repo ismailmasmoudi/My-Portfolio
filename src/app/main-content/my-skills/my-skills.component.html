@@ -40,9 +40,13 @@
             <img src="img/skills-icons/10Material-Design.svg" alt="Material-Design">
             <span>Materiel Design</span>
         </div>
-        <div class="skills-image">
-            <img src="img/skills-icons/11Continually-learning.svg" alt="Continually-learning">
+        <div class="skills-image" (mouseenter)="onSkillImageHover()" (mouseleave)="onSkillImageLeave()">
+            <img #skillImage src="img/skills-icons/11Continually-learning.svg" alt="Continually-learning">
             <span class="purple-color">Continually learning</span>
+            <div class="hover-content" *ngIf="showHoverContent">
+                <img class="background-image" src="img/skills-icons/white-background.svg" alt="Background">
+
+            </div>
         </div>
 
     </div>
@@ -54,14 +58,14 @@
             </div>
             <div class="second-text-container-with-button">
                 <div class="text-container-without-button">
-                <div class="heading-group">
-                    <h2 class="heading-style">Looking for </h2>
-                    <h2 class="heading-style purple-color"> another skill</h2>
-                    <h2 class="heading-style">?</h2>
-                </div>
+                    <div class="heading-group">
+                        <h2 class="heading-style">Looking for </h2>
+                        <h2 class="heading-style purple-color"> another skill</h2>
+                        <h2 class="heading-style">?</h2>
+                    </div>
                     <p>Feel free to contact me. I look forward to expanding on my previous knowledge.</p>
                 </div>
-                    <button>Get in touch</button>
+                <button>Get in touch</button>
             </div>
         </div>
         <div class="horizontal-line"></div>

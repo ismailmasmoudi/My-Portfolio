@@ -31,8 +31,20 @@
         justify-content: flex-start;
         align-items: center;
         flex-direction: column;
-
-
+        width: 200px;
+        svg {
+            cursor: pointer;
+            text {
+              font-weight: 600;
+        
+              &.i-letter {
+                  stroke: rgba(112, 230, 28, 1);
+                  stroke-width: 0.3px; // Adjust for desired dot size
+                  stroke-linecap: round;
+        
+              }
+            }
+            }
 
         a {
             color: #ffff;
@@ -42,6 +54,7 @@
             text-align: left;
             text-decoration: none;
             position: relative;
+            cursor: pointer;
             &::before { // Creates the line
                 content: "";
                 position: absolute;

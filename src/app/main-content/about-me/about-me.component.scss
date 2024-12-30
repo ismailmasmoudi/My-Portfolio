@@ -11,7 +11,6 @@
 .about-me-container {
     display: block;
     margin-left: 100px;
-    padding-top: 170px;
     position: relative;
     width: auto;
     height: 532px;
@@ -24,7 +23,6 @@
         right: 0;
         top: 0;
         width: 100%;
-
         .graphic-content {
             display: flex;
             justify-content: center;
@@ -49,14 +47,13 @@
                 position: relative;
                 z-index: 10;
                 img {
-                    height: 462px;
-                    width: 596px;
+                    height: 426px;
+                    width: 345px;
                     background-color: transparent;
                     position: absolute;
-                    top: 37px;
-                    left: -74px;
+                    top: 36px;
+                    left: 47px;
                     z-index: 1;
-
                 }
             }
 

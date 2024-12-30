@@ -8,14 +8,28 @@ header {
   justify-content: space-between;
   align-items: center;
   background-color: #141D2F;
+  a{
+    cursor: pointer;
 
-  .header-name {
-    margin: 0;
-    color: #ffff;
-  }
-
+    svg {
+      text {
+        font-weight: 600;
+  
+        &.i-letter {
+            stroke: rgba(112, 230, 28, 1);
+            stroke-width: 0.3px; // Adjust for desired dot size
+            stroke-linecap: round;
+  
+        }
+      }
+  
+    
+    }
+    }
+ 
   nav {
     max-width: 100%;
+    width: 70%;
     margin: 0;
     padding: 0;
     display: flex;
