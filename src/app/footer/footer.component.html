@@ -2,37 +2,37 @@
   <div class="footer-container">
 
     <div class="footer-left">
-      <svg viewBox="0 0 350 30" href="index.html">
-        <text  x="2" y="20" fill="#fff" font-size="22" >i</text>
-        <text x="10" y="20" fill="#fff" font-size="18">s</text>
-        <circle cx="5.1" cy="4.7" r="2.3" fill="rgba(151, 71, 255, 1)"></circle>
-        <text x="20" y="20" fill="#fff" font-size="18">m</text>
-        <text x="40" y="20" fill="#fff" font-size="18">a</text>
-        <text x="54" y="20" fill="rgba(112, 230, 28, 1)" font-size="18">i</text>
-        <text x="62" y="20" fill="#fff" font-size="18">l</text>
-    
-    
-      </svg>
-      
-      <a routerLink="/legal-notice">Legal Notice</a>
+      <a href="index.html">
+        <div class="logo">
+          <p class="logo-letter" style="color: #fff;">i</p>
+          <p class="logo-letter" style="color: #fff;">s</p>
+          <div class="logo-circle" style="background-color: rgba(151, 71, 255, 1);"></div>
+          <p class="logo-letter" style="color: #fff;">m</p>
+          <p class="logo-letter" style="color: #fff;">a</p>
+          <p class="logo-letter" style="color: rgba(112, 230, 28, 1);">i</p>
+          <p class="logo-letter" style="color: #fff;">l</p>
+        </div>
+      </a>
+
+      <a class="legal-notice" routerLink="/legal-notice">{{ (isGerman$ | async) ? 'Impressum' : 'Legal Notice' }}</a> 
 
 
 
     </div>
     <h3>© Ismail Masmoudi 2025</h3>
 
-        <div class="icons">
-          <a href="https://github.com/ismailmasmoudi/" target="_blank" rel="noopener noreferrer">
-            <img src="img/github.svg" alt="GitHub">
-          </a>
-          <a href="mailto:ismail.masmoudi7@gmail.com">
-            <img src="img/Email-button.svg" alt="Email">
-          </a>
-          <a href="likedin.com">
-          <img src="img/Linkedin-button.svg" alt="LinkedIn"> </a>
-         </div>
+    <div class="icons">
+      <a href="https://github.com/ismailmasmoudi/" target="_blank" rel="noopener noreferrer">
+        <img src="img/github.svg" alt="GitHub">
+      </a>
+      <a href="mailto:ismail.masmoudi7@gmail.com">
+        <img src="img/Email-button.svg" alt="Email">
+      </a>
+      <a href="likedin.com">
+        <img src="img/Linkedin-button.svg" alt="LinkedIn"> </a>
+    </div>
   </div>
-      
+
 </footer>
 <div class="shadow">
 

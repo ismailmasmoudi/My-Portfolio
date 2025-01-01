@@ -1,109 +1,111 @@
 <div class="contact-title" id="contact">
   <div class="horizontal-line left-line"></div>
-  <h1 class="contact-text">Contact</h1>
+  <h1 class="contact-text">{{ (isGerman$ | async) ? 'Kontakt' : 'Contact' }}</h1>
 </div>
 
 <div class="contact-form">
   <div class="container-left">
-    <h2>Got a problem to solve?</h2>
+    <h2>{{ (isGerman$ | async) ? 'Haben Sie ein Problem zu lösen?' : 'Got a problem to solve?' }}</h2>
     <div class="details-container">
-      <p>Contact me through this form, I am interested in hearing from you, knowing your ideas and contributing to your projects with my work.</p>
-      <p>Need a Frontend developer? <b>Contact me!</b></p>
+      <p>{{ (isGerman$ | async) ? 'Kontaktieren Sie mich über dieses Formular, ich freue mich darauf von Ihnen zu hören,
+        Ihre Ideen zu kennen und mit meiner Arbeit zu Ihren Projekten beizutragen.' : 'Contact me through this form, I
+        am interested in hearing from you, knowing your ideas and contributing to your projects with my work.' }}</p>
+      <p>{{ (isGerman$ | async) ? 'Benötigen Sie einen Frontend-Entwickler? ' : 'Need a Frontend developer? ' }} <b>{{
+          (isGerman$ | async) ? ' Kontaktieren Sie mich!' : 'Contact me!' }}</b></p>
+
     </div>
   </div>
   <div class="container-right">
     <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
       <div class="input-container-error-message">
-      <div class="input-container">
-        <input [(ngModel)]="contactData.name" minlength="3" type="text" id="name" name="name" pattern="^[a-zA-Z]+$" placeholder="Your name.." required
-          #nameInput="ngModel" [ngClass]="{
+        <div class="input-container">
+          <input [(ngModel)]="contactData.name" minlength="3" type="text" id="name" name="name" pattern="^[a-zA-Z]+$"
+            [placeholder]="(isGerman$ | async) ? 'Dein Name..' : 'Your name..'" required #nameInput="ngModel" [ngClass]="{
             'valid': nameInput.valid && nameInput.touched,
             'invalid': nameInput.invalid && nameInput.touched
           }" updateOn="blur" (ngModelChange)="validateForm()" />
-        <img *ngIf="nameInput.valid && nameInput.touched" src="img/right.svg" width="25" height="25">
-        <img *ngIf="nameInput.invalid && nameInput.touched" src="img/false.svg" width="25" height="25">
-
+          <img *ngIf="nameInput.valid && nameInput.touched" src="img/right.svg" width="25" height="25">
+          <img *ngIf="nameInput.invalid && nameInput.touched" src="img/false.svg" width="25" height="25">
+        </div>
+        <span *ngIf="nameInput.invalid && nameInput.touched" class="error-message">
+          <span *ngIf="nameInput.errors?.['required']">{{ (isGerman$ | async) ? 'Ihr Name ist erforderlich.' : 'Your
+            name is required.' }}</span>
+          <span *ngIf="nameInput.errors?.['minlength']">{{ (isGerman$ | async) ? 'Mindestens 3 Zeichen lang.' : 'Minimum
+            3 characters long.' }}</span>
+        </span>
       </div>
-      <span *ngIf="nameInput.invalid && nameInput.touched" class="error-message">
-        <span *ngIf="nameInput.errors?.['required']">Your name is required.</span>
-        <span *ngIf="nameInput.errors?.['minlength']">Minimum 3 characters long.</span>  </span>
-    </div>
 
-<div class="input-container-error-message">
-
-  <div class="input-container">
-    <input [(ngModel)]="contactData.email" type="email" id="email" name="email" placeholder="Your Email.." required
-      pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" #emailInput="ngModel" [ngClass]="{
-        'valid': emailInput.valid && emailInput.touched,
-        'invalid': emailInput.invalid && emailInput.touched
-      }" updateOn="blur" (ngModelChange)="validateForm()" />
-    <img *ngIf="emailInput.valid && emailInput.touched" src="img/right.svg" width="25" height="25">
-    <img *ngIf="emailInput.invalid && emailInput.touched" src="img/false.svg" width="25" height="25">
-
-  </div>
-  <span *ngIf="emailInput.invalid && emailInput.touched" class="error-message">
-    <span *ngIf="emailInput.errors?.['required']">Your Email is required.</span>
-    <span *ngIf="emailInput.errors?.['pattern']">Invalid email format.</span> </span>
-</div>
+      <div class="input-container-error-message">
+        <div class="input-container">
+          <input [(ngModel)]="contactData.email" type="email" id="email" name="email"
+            [placeholder]="(isGerman$ | async) ? 'Deine E-Mail..' : 'Your Email..'" required
+            pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" #emailInput="ngModel" [ngClass]="{
+            'valid': emailInput.valid && emailInput.touched,
+            'invalid': emailInput.invalid && emailInput.touched
+          }" updateOn="blur" (ngModelChange)="validateForm()" />
+          <img *ngIf="emailInput.valid && emailInput.touched" src="img/right.svg" width="25" height="25">
+          <img *ngIf="emailInput.invalid && emailInput.touched" src="img/false.svg" width="25" height="25">
+        </div>
+        <span *ngIf="emailInput.invalid && emailInput.touched" class="error-message">
+          <span *ngIf="emailInput.errors?.['required']">{{ (isGerman$ | async) ? 'Ihre E-Mail ist erforderlich.' : 'Your
+            Email is required.' }}</span>
+          <span *ngIf="emailInput.errors?.['pattern']">{{ (isGerman$ | async) ? 'Ungültiges E-Mail-Format.' : 'Invalid
+            email format.' }}</span>
+        </span>
+      </div>
 
       <div class="textarea-container-error-message">
-      <div class="textarea-container">
-        <textarea #message="ngModel" minlength="10" [(ngModel)]="contactData.message" id="message" name="message"
-          placeholder="Your Message.." required [ngClass]="{
+        <div class="textarea-container">
+          <textarea #message="ngModel" minlength="10" [(ngModel)]="contactData.message" id="message" name="message"
+            [placeholder]="(isGerman$ | async) ? 'Deine Nachricht..' : 'Your Message..'" required [ngClass]="{
             'valid': message.valid && message.touched,
             'invalid': message.invalid && message.touched
           }" updateOn="blur" (ngModelChange)="validateForm()"></textarea>
-        <img *ngIf="message.valid && message.touched" src="img/right.svg" width="25" height="25">
-        <img *ngIf="message.invalid && message.touched" src="img/false.svg" width="25" height="25">
-
-      </div>
-      <span *ngIf="message.invalid && message.touched" class="error-message">
-        <span *ngIf="message.errors?.['required']">Your message is empty.</span>
-        <span *ngIf="message.errors?.['minlength']">Minimum 10 characters long.</span>
-      </span>
-    </div>
-      <!-- <input type="submit" value="Submit" [disabled]="!contactForm.valid"> -->
-     <div class="checkbox-and-privacyagreement">
-
-      <div class="checkbox-container">
-        <img [src]="checkboxImageUrl"
-             (click)="togglePrivacyAgreement()"
-             (mouseenter)="checkboxHover = true; updateCheckboxImage()"  
-             (mouseleave)="checkboxHover = false; updateCheckboxImage()" 
-             alt="Privacy Agreement Checkbox"
-             style="cursor: pointer;">
-        
-        
-         <p>I've read the <a href="your-privacy-policy-url" target="_blank" style="color: #9747FF; text-decoration: none; cursor: pointer;">privacy policy</a> and agree to the processing of my data as outlined.</p>
-  
+          <img *ngIf="message.valid && message.touched" src="img/right.svg" width="25" height="25">
+          <img *ngIf="message.invalid && message.touched" src="img/false.svg" width="25" height="25">
         </div>
-        <span *ngIf="!privacyAgreementChecked" class="error-message" style="color: rgba(230, 28, 64, 1)">
-        Please accept the privacy policy.
+        <span *ngIf="message.invalid && message.touched" class="error-message">
+          <span *ngIf="message.errors?.['required']">{{ (isGerman$ | async) ? 'Ihre Nachricht ist leer.' : 'Your message
+            is empty.' }}</span>
+          <span *ngIf="message.errors?.['minlength']">{{ (isGerman$ | async) ? 'Mindestens 10 Zeichen lang.' : 'Minimum
+            10 characters long.' }}</span>
         </span>
       </div>
+
+      <div class="checkbox-and-privacyagreement">
+        <div class="checkbox-container">
+          <img [src]="checkboxImageUrl" (click)="togglePrivacyAgreement()"
+            (mouseenter)="checkboxHover = true; updateCheckboxImage()"
+            (mouseleave)="checkboxHover = false; updateCheckboxImage()" alt="Privacy Agreement Checkbox"
+            style="cursor: pointer;">
+            <p>{{ (isGerman$ | async) ? 'Ich habe die Datenschutzerklärung gelesen und stimme der Verarbeitung meinerDaten wie dort beschrieben zu ' : "I've read the privacy policy and agree to the processing of my data asoutlined " }}
+              <a href="/privacy-policy" target="_blank"
+              style="color: #9747FF; text-decoration: none; cursor: pointer;">{{ (isGerman$ | async) ?
+              'Datenschutzerklärung' : 'Privacy Policy' }}</a>.</p>
+        </div>
+        <span *ngIf="!privacyAgreementChecked" class="error-message" style="color: rgba(230, 28, 64, 1)">
+          {{ (isGerman$ | async) ? 'Bitte akzeptieren Sie die Datenschutzerklärung.' : 'Please accept the privacy policy.' }}
+        </span>
+      </div>
+
       <div class="span-button-container">
-   
-    <button type="submit"
-               [disabled]="!contactForm.valid || !privacyAgreementChecked"
-               [style.background-color]="contactForm.valid && privacyAgreementChecked ? 'rgba(112, 230, 28, 1)' : 'rgba(182, 182, 182, 1)'"
-              >
-         Send Message 
-    </button>
-  </div>
-    
+        <button type="submit" [disabled]="!contactForm.valid || !privacyAgreementChecked"
+          [style.background-color]="contactForm.valid && privacyAgreementChecked ? 'rgba(112, 230, 28, 1)' : 'rgba(182, 182, 182, 1)'">
+          {{ (isGerman$ | async) ? 'Nachricht senden' : 'Send Message' }}
+        </button>
+      </div>
     </form>
   </div>
 </div>
+
 <div class="go-up" (click)="scrollToTop()">
-  <img [src]="imageUrl" (mouseenter)="imageUrl = 'img/Go-up-button-green.svg'" (mouseleave)="imageUrl = 'img/Go-up-button.svg'" alt="">
+  <img [src]="imageUrl" (mouseenter)="imageUrl = 'img/Go-up-button-green.svg'"
+    (mouseleave)="imageUrl = 'img/Go-up-button.svg'" alt="">
 </div>
 
 <div *ngIf="showConfirmationLayer" class="confirmation-layer">
   <div class="confirmation-content">
     <img src="img/right.svg" width="40" height="40">
-
-
-      <h2>Message sent successfully!</h2>
-
+    <h2>{{ (isGerman$ | async) ? 'Nachricht erfolgreich gesendet!' : 'Message sent successfully!' }}</h2>
   </div>
 </div>

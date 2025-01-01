@@ -16,7 +16,7 @@
             font-weight: 700;
             line-height: 108px;
             text-align: center;
-            color: white; // Or rgba(255, 255, 255, 1)
+            color:  rgba(255, 255, 255, 1);
         }
 
         .horizontal-line {
@@ -46,14 +46,14 @@
     flex-direction: column;
     gap: 35px;
     margin-right: 100px;
-  
+
     .project-item {
         display: flex;
         justify-content: space-between;
         gap: 35px;
         height: 339px;
         background-color: transparent;
-       
+
         h3 {
             color: rgba(112, 230, 28, 1);
             background-color: transparent;
@@ -71,12 +71,15 @@
             z-index: 10;
             background-color: transparent;
         }
-        .project-left{
+
+        .project-left {
             align-items: flex-end !important;
-            p{
+
+            p {
                 text-align: end;
             }
         }
+
         .project-details {
             display: flex;
             flex-direction: column;
@@ -92,15 +95,17 @@
                 flex-direction: column;
                 gap: 15px;
                 background-color: transparent;
-                p{
+
+                p {
                     background-color: transparent;
                 }
             }
 
             .project-buttons {
                 display: flex;
-                gap: 86px; // space between buttons
+                gap: 86px; 
                 background-color: transparent;
+
                 button {
                     font-size: 23px;
                     font-weight: 400;
@@ -126,13 +131,13 @@
 
                     &:hover {
                         background-color: rgba(112, 230, 28, 1);
-                        color: white; 
+                        color: white;
                         border: none;
                     }
 
 
                     &:active {
-                        transition: none; // Remove transition on click for instant effect.
+                        transition: none; 
                         background-color: white;
                         color: rgba(112, 230, 28, 1);
                     }

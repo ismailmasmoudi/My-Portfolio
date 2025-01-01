@@ -23,6 +23,7 @@
         right: 0;
         top: 0;
         width: 100%;
+
         .graphic-content {
             display: flex;
             justify-content: center;
@@ -46,6 +47,7 @@
                 background-color: transparent;
                 position: relative;
                 z-index: 10;
+
                 img {
                     height: 426px;
                     width: 345px;

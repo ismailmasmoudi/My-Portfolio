@@ -4,7 +4,7 @@ import { MainContentComponent } from './main-content/main-content.component';
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 
 export const routes: Routes = [
-  { path: '', component: MainContentComponent }, // Correct
+  { path: '', component: MainContentComponent }, 
   { path: 'legal-notice', component: LegalNoticeComponent },
   { path: 'privacy-policy', component: PrivacyPolicyComponent }
 ];

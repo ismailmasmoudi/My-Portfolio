@@ -10,8 +10,8 @@
 }
 
 .legal-notice-container {
-    max-width: 1440px; 
-    margin: 100px; 
+    max-width: 1440px;
+    margin: 100px;
     margin-right: 100px;
     display: flex;
     flex-direction: column;
@@ -20,9 +20,11 @@
     position: relative;
     z-index: 10;
     background-color: transparent;
-    .purble-color{
+
+    .purble-color {
         color: rgba(151, 71, 255, 1);
     }
+
     h2 {
         color: rgba(112, 230, 28, 1);
 
