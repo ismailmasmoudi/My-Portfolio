@@ -9,20 +9,16 @@
 }
 
 .about-me-container {
-    display: block;
-    margin-left: 100px;
-    position: relative;
-    width: auto;
-    height: 532px;
+   
 
+    position: relative;
+    width: 100%;
     .about-me-content {
         display: flex;
-        justify-content: space-between;
         align-items: center;
-        position: absolute;
-        right: 0;
-        top: 0;
         width: 100%;
+        gap: 40px;
+        justify-content: center;
 
         .graphic-content {
             display: flex;

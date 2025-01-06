@@ -1,3 +1,5 @@
+
+.contact-container{
 .container-right {
   border-radius: 5px;
   background-color: transparent;
@@ -86,7 +88,8 @@ form {
   padding-top: 170px;
   margin-bottom: 32px;
   z-index: 10;
-
+  max-width: 1240px;
+  justify-content: center;
   .horizontal-line {
     border-top: 4px solid rgba(151, 71, 255, 1);
     height: 0;
@@ -107,8 +110,8 @@ form {
   justify-content: space-between;
   align-items: start;
   margin: 0 100px;
-  height: 533px;
-
+  max-width: 1240px;
+  justify-content: center;
   .input-container-error-message {
     display: flex;
     justify-content: space-between;
@@ -242,9 +245,8 @@ input[type="email"] {
 
 .go-up {
   display: flex;
-  margin-right: 100px;
-  margin-top: 50px;
-  justify-content: flex-end;
+  max-width: 1440px;
+  justify-content: end;
 
   img {
     cursor: pointer;
@@ -299,4 +301,6 @@ input[type="email"] {
     transform: translateX(0);
     opacity: 1;
   }
+}
+
 }

@@ -1,13 +1,9 @@
 .my-skills-container {
     display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    height: 404px;
+    justify-content: center;
     padding-top: 170px;
-    margin-left: 100px;
     background-color: transparent;
-
-
+    align-items: center;
 
     .images-container {
 
@@ -53,18 +49,21 @@
                 justify-content: space-between;
                 align-items: flex-end;
                 background-color: transparent;
-                &.english{
+
+                &.english {
                     gap: 40px;
-                 }
-          
-                 &.german{
-                  gap: 20px;
-          
-                 }
+                }
+
+                &.german {
+                    gap: 20px;
+
+                }
+
                 h1 {
                     &.german {
                         font-size: 48px;
                     }
+
                     &.english {
                         font-size: 90px;
                     }
@@ -104,9 +103,11 @@
                 transition: opacity 0.3s ease;
                 font-size: 23px;
                 transition: all 100ms ease-in-out;
+
                 &.german {
                     font-size: 18px;
-                  }
+                }
+
                 &:hover {
                     padding: 20px 40px;
                     background-color: rgba(151, 71, 255, 1);
@@ -147,17 +148,21 @@
     align-items: baseline;
     gap: 2px;
     background-color: transparent;
-    h2{ 
-        font-size: 32px; 
+
+    h2 {
+        font-size: 32px;
     }
 
 
-    &.german { // Styles for German
-      gap: 4px;
-      h2 {
-        font-size: 20px;
-      }
+    &.german {
+        // Styles for German
+        gap: 4px;
+
+        h2 {
+            font-size: 20px;
+        }
     }
+
     .heading-style {
         font-size: 32px;
         font-weight: 700;

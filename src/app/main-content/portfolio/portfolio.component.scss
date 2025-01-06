@@ -1,9 +1,13 @@
-.portfolio-container {
+.portfolio {
     display: flex;
-    flex-direction: column;
-    gap: 32px;
-    margin-left: 100px;
-    padding-top: 170px;
+    justify-content: center;
+
+    .portfolio-container {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        padding-top: 170px;
+        max-width: 1240px;
 
     .portfolio-title {
         display: flex;
@@ -16,7 +20,7 @@
             font-weight: 700;
             line-height: 108px;
             text-align: center;
-            color:  rgba(255, 255, 255, 1);
+            color: rgba(255, 255, 255, 1);
         }
 
         .horizontal-line {
@@ -103,7 +107,7 @@
 
             .project-buttons {
                 display: flex;
-                gap: 86px; 
+                gap: 86px;
                 background-color: transparent;
 
                 button {
@@ -137,7 +141,7 @@
 
 
                     &:active {
-                        transition: none; 
+                        transition: none;
                         background-color: white;
                         color: rgba(112, 230, 28, 1);
                     }
@@ -145,6 +149,7 @@
             }
         }
     }
+}
 }
 
 
