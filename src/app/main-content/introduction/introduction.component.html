@@ -1,27 +1,32 @@
+<main class="main-container">
+
+
 <div class="introduction-container">
-  <div class="image-container">
-    <img src="img/photo-shadows.png" alt="background">
-    <img src="img/mypicture6.png" alt="my picture">
-  </div>
-
-  <div class="introduction-content">
-    <div class="title">
-      <div class="title-left">
-        <p>I am</p>
-      </div>
-
-      <div class="title-right">
-        <p>Ismail Masmoudi</p>
-        <p>FRONTEND DEVELOPER</p>
-      </div>
+  <div class="image-and-introduction-content">
+    <div class="image-container">
+      <img src="img/photo-shadows.png" alt="background">
+      <img src="img/mypicture6.png" alt="my picture">
     </div>
-    <button>Let's Talk</button>
-  </div>
+  
+    <div class="introduction-content">
+      <div class="title">
+        <div class="title-left">
+          <p [ngClass]="(isGerman$ | async) ? 'german' : 'english'">{{ (isGerman$ | async) ? 'Ich bin' : 'I am' }}</p>
+        </div>
+    
+        <div class="title-right">
+          <p>Ismail Masmoudi</p>
+          <p [ngClass]="(isGerman$ | async) ? 'german' : 'english'">{{ (isGerman$ | async) ? 'FRONTEND-ENTWICKLER' : 'FRONTEND DEVELOPER' }}</p>
+        </div>
+      </div>
+      <button>{{ (isGerman$ | async) ? 'Lass uns reden' : 'Let\'s Talk' }}</button>
+    </div>
 
-  <div class="band">
-    <img src="img/Vector.png" alt="">
   </div>
+  
 
+
+  
   <div class="contact-bar">
     <div class="line"></div>
     <div class="icons">
@@ -39,8 +44,15 @@
   </div>
 
   <div class="scroll-indicator">
-    <p>Scroll down</p>
+    <p [ngClass]="(isGerman$ | async) ? 'german' : 'english'">{{ (isGerman$ | async) ? 'Nach unten scrollen' : 'Scroll down' }}</p>
     <img src="img/arrow-down-line.svg" alt="Scroll Down">
   </div>
-
 </div>
+</main>
+<div class="band">
+  <img src="img/Vector.png" alt="">
+</div>
+
+
+
+        

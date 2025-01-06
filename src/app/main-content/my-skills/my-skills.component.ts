@@ -1,5 +1,6 @@
-import { Component, ViewChild, ElementRef } from '@angular/core';
+import { Component, ViewChild, ElementRef, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { TranslationService } from '../../services/translation.service';
 @Component({
   selector: 'app-my-skills',
   standalone: true,
@@ -11,6 +12,15 @@ export class MySkillsComponent {
   @ViewChild('skillImage') skillImage!: ElementRef;
   showHoverContent = false;
 
+  translationService = inject(TranslationService);
+  isGerman$ = this.translationService.isGerman$;
+  hoverBackgroundImageUrl!: string;
+
+  constructor() {
+    this.isGerman$.subscribe(isGerman => {
+      this.updateHoverBackgroundImageUrl(); // Update on language change
+    });
+  }
 
   /**
    * @method onSkillImageHover
@@ -31,5 +41,11 @@ export class MySkillsComponent {
   onSkillImageLeave() {
     this.showHoverContent = false;
     this.skillImage.nativeElement.src = 'img/skills-icons/11Continually-learning.svg';
+  }
+
+  updateHoverBackgroundImageUrl() { // Update method
+    this.isGerman$.subscribe(isGerman => {
+      this.hoverBackgroundImageUrl = isGerman ? 'img/skills-icons/white-background-german.png' : 'img/skills-icons/white-background.svg';
+    });
   }
 }

@@ -42,34 +42,37 @@
         </div>
         <div class="skills-image" (mouseenter)="onSkillImageHover()" (mouseleave)="onSkillImageLeave()">
             <img #skillImage src="img/skills-icons/11Continually-learning.svg" alt="Continually-learning">
-            <span class="purple-color">Continually learning</span>
+            <span class="purple-color">{{ (isGerman$ | async) ? 'Ständig lernend' : 'Continually learning' }}</span>
             <div class="hover-content" *ngIf="showHoverContent">
-                <img class="background-image" src="img/skills-icons/white-background.svg" alt="Background">
-
+                <img class="background-image" [src]="hoverBackgroundImageUrl" alt="Background">
             </div>
         </div>
+        
 
     </div>
     <div class="skills-description">
         <div class="text-button-container">
-            <div class="text-container">
-                <h1>My skills</h1>
-                <p>I have gained experience in building projects with different frontend technologies and concepts.</p>
+            <div class="text-container"  [ngClass]="(isGerman$ | async) ? 'german' : 'english'"> <h1 [ngClass]="(isGerman$ | async) ? 'german' : 'english'">{{ (isGerman$ | async) ? 'Meine Fähigkeiten' : 'My skills' }}</h1>
+                <p>{{ (isGerman$ | async) ? 'Ich habe Erfahrung im Aufbau von Projekten mit verschiedenen Frontend-Technologien und -Konzepten gesammelt.' : 'I have gained experience in building projects with different frontend technologies and concepts.' }}</p>
             </div>
             <div class="second-text-container-with-button">
                 <div class="text-container-without-button">
-                    <div class="heading-group">
-                        <h2 class="heading-style">Looking for </h2>
-                        <h2 class="heading-style purple-color"> another skill</h2>
+                    <div class="heading-group" [ngClass]="(isGerman$ | async) ? 'german' : 'english'">
+                        <h2 class="heading-style">{{ (isGerman$ | async) ? 'Suchen nach' : 'Looking for' }}</h2>
+                        <h2 class="heading-style purple-color">{{ (isGerman$ | async) ? 'einer anderen Fähigkeit' : 'another skill' }}</h2>
                         <h2 class="heading-style">?</h2>
                     </div>
-                    <p>Feel free to contact me. I look forward to expanding on my previous knowledge.</p>
+                    <p>{{ (isGerman$ | async) ? 'Zögern Sie nicht, mich zu kontaktieren. Ich freue mich darauf, mein bisheriges Wissen zu erweitern.' : 'Feel free to contact me. I look forward to expanding on my previous knowledge.' }}</p>
                 </div>
-                <button>Get in touch</button>
+                <button [ngClass]="(isGerman$ | async) ? 'german' : 'english'">{{ (isGerman$ | async) ? 'Kontaktieren Sie mich' : 'Get in touch' }}</button>
             </div>
         </div>
         <div class="horizontal-line"></div>
     </div>
-</div>
+    
+    
+    
+    
+    
 
 <img class="green-shadow" src="img/Green-shadow.png" alt="shadow">

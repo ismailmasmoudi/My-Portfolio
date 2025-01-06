@@ -72,7 +72,9 @@
     justify-content: space-between;
     align-items: center;
     gap: 24px;
-
+    h1{
+        font-size:89px;
+    }
     .description-container {
         display: flex;
         flex-direction: column; // Ensure items stack vertically

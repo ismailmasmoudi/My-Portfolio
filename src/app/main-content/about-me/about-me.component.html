@@ -2,36 +2,31 @@
 <div class="about-me-container">
   <div class="about-me-content">
     <div class="text-content">
-      <h1>About me</h1>
+      <h1>{{ (isGerman$ | async) ? 'Über mich' : 'About me' }}</h1>
       <div class="description-container">
         <div class="description">
-          <p>Hi, I’m a german speaking Frontend Developer based near Munich. Motivated by the limitless opportunities
-            within IT, I am excited about crafting visually captivating and intuitive websites and applications.</p>
+          <p>{{ (isGerman$ | async) ? 'Hallo, ich bin ein deutschsprachiger Frontend-Entwickler mit Sitz in München. Motiviert durch die grenzenlosen Möglichkeiten in der IT, bin ich begeistert davon, visuell fesselnde und intuitive Webseiten und Anwendungen zu entwickeln.' : 'Hi, I’m a german speaking Frontend Developer based in Munich. Motivated by the limitless opportunities within IT, I am excited about crafting visually captivating and intuitive websites and applications.' }}</p>
         </div>
         <div class="description">
           <div class="description-image"><img src="img/Location.svg" alt="location icon"></div>
-          <p>Flexible in terms of working environments, I can work effectively both on-site in Munich and remotely.</p>
+          <p>{{ (isGerman$ | async) ? 'Ich bin flexibel in Bezug auf die Arbeitsumgebung und kann sowohl vor Ort in München als auch remote arbeiten.' : 'Flexible in terms of working environments, I can work effectively both on-site in Munich and remotely.' }}</p>
         </div>
         <div class="description">
-          <div class="description-image"><img src="img/bulb-desktop.svg" alt="bulb deasktop icon"> </div>
-          <p>I am open-minded and always looking for personal challenges to constantly improve my knowledge and skills.
-          </p>
+          <div class="description-image"><img src="img/bulb-desktop.svg" alt="bulb deasktop icon"></div>
+          <p>{{ (isGerman$ | async) ? 'Ich bin aufgeschlossen und immer auf der Suche nach persönlichen Herausforderungen, um meine Kenntnisse und Fähigkeiten ständig zu verbessern.' : 'I am open-minded and always looking for personal challenges to constantly improve my knowledge and skills.' }}</p>
         </div>
         <div class="description">
           <div class="description-image"><img src="img/puzzle-desktop.svg" alt="puzzle-desktop icon"></div>
-          <p>In my profession, programming isn't just about writing code; it's a creative form of problem-solving. I
-            take pride in my ability to distill complex technical challenges into simple, user-friendly solutions. This
-            way, I help you achieve your goals and bring your visions to life.</p>
+          <p>{{ (isGerman$ | async) ? 'In meinem Beruf geht es beim Programmieren nicht nur um das Schreiben von Code, sondern auch um eine kreative Form der Problemlösung. Ich bin stolz auf meine Fähigkeit, komplexe technische Herausforderungen in einfache, benutzerfreundliche Lösungen zu destillieren. Auf diese Weise helfe ich Ihnen, Ihre Ziele zu erreichen und Ihre Visionen zum Leben zu erwecken.'  : 'In my profession, programming isn’t just about writing code; it’s a creative form of problem-solving. I take pride in my ability to distill complex technical challenges into simple, user-friendly solutions. This way, I help you achieve your goals and bring your visions to life.' }}</p>
         </div>
       </div>
     </div>
     <div class="graphic-content">
       <div class="circle">
         <img src="img\ismail.png" alt="mypicture">
-
-
       </div>
       <div class="horizontal-line"></div>
     </div>
   </div>
 </div>
+

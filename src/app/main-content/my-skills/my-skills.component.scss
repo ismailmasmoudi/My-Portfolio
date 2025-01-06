@@ -53,7 +53,22 @@
                 justify-content: space-between;
                 align-items: flex-end;
                 background-color: transparent;
-                gap: 40px
+                &.english{
+                    gap: 40px;
+                 }
+          
+                 &.german{
+                  gap: 20px;
+          
+                 }
+                h1 {
+                    &.german {
+                        font-size: 48px;
+                    }
+                    &.english {
+                        font-size: 90px;
+                    }
+                }
             }
 
             .second-text-container-with-button {
@@ -83,13 +98,15 @@
                 background-color: #70E61C;
                 box-shadow: 4px 4px 4px 0px #00000040;
                 color: #fff;
-                border: none; 
-                cursor: pointer; 
-                opacity: 1; 
-                transition: opacity 0.3s ease; 
+                border: none;
+                cursor: pointer;
+                opacity: 1;
+                transition: opacity 0.3s ease;
                 font-size: 23px;
                 transition: all 100ms ease-in-out;
-
+                &.german {
+                    font-size: 18px;
+                  }
                 &:hover {
                     padding: 20px 40px;
                     background-color: rgba(151, 71, 255, 1);
@@ -127,16 +144,26 @@
 
 .heading-group {
     display: inline-flex;
-    align-items: baseline; 
+    align-items: baseline;
     gap: 2px;
     background-color: transparent;
+    h2{ 
+        font-size: 32px; 
+    }
 
+
+    &.german { // Styles for German
+      gap: 4px;
+      h2 {
+        font-size: 20px;
+      }
+    }
     .heading-style {
         font-size: 32px;
         font-weight: 700;
         line-height: 38.4px;
         text-align: left;
-        margin: 0; 
+        margin: 0;
         color: #fff;
         background-color: transparent;
 
@@ -174,8 +201,9 @@
     &:hover {
 
         img {
-            transform: translateY(-12px); 
+            transform: translateY(-12px);
         }
+
         gap: 10px;
     }
 
@@ -223,6 +251,7 @@
             object-fit: cover;
             background-color: transparent;
         }
+
         &:hover {
             .hover-content {
                 display: block !important;

@@ -3,103 +3,97 @@
 <div class="privacy-policy-container">
     <div class="privacy-policy-title">
         <div class="horizontal-line"></div>
-        <h1>Privacy Policy </h1>
+        <h1>{{ (isGerman$ | async) ?  'Datenschutzerklärung' : 'Privacy Policy' }}</h1>
     </div>
 
     <div class="details-container">
-        <h2>1. Information on the Collection of Personal Data</h2>
+        <h2>{{ (isGerman$ | async) ? '1. Informationen zur Erhebung personenbezogener Daten' : '1. Information on the Collection of Personal Data' }}</h2>
         <p>
-            (a) In the following, we inform you about the collection of personal data when using our website. Personal
-            data are all data that can be personally related to you, e.g. name, address, email addresses, user
-            behaviour.
-            (b) Controller pursuant to Art. 4 para. 7 of the EU General Data Protection Regulation (GDPR) is Ismail
-            Mohamed Masmoudi, Moosburgerstr 10, 80993 München, Deutschland and ismail.masmoudi&#64;Gmail.com.
+            {{ (isGerman$ | async) ? '(a) Im Folgenden informieren wir Sie über die Erhebung personenbezogener Daten bei Nutzung unserer Website. Personenbezogene Daten sind alle Daten, die auf Sie persönlich beziehbar sind, z. B. Name, Adresse, E-Mail-Adressen, Nutzerverhalten.' : '(a) In the following, we inform you about the collection of personal data when using our website. Personal data are all data that can be personally related to you, e.g. name, address, email addresses, user behaviour.' }}
+            <br><br>
+            {{ (isGerman$ | async) ? '(b) Verantwortlicher gemäß Art. 4 Abs. 7 der EU-Datenschutz-Grundverordnung (DSGVO) ist Ismail Mohamed Masmoudi, Moosburgerstr 10, 80993 München, Deutschland.' : '(b) Controller pursuant to Art. 4 para. 7 of the EU General Data Protection Regulation (GDPR) is Ismail Mohamed Masmoudi, Moosburgerstr 10, 80993 München, Deutschland.' }}
         </p>
     </div>
 
     <div class="details-container">
-        <h2>2. Your Rights</h2>
+        <h2>{{ (isGerman$ | async) ? '2. Ihre Rechte' : '2. Your Rights' }}</h2>
         <p>
-            You have the following rights with respect to the personal data concerning you:
+          {{ (isGerman$ | async) ? 'Sie haben folgende Rechte hinsichtlich der Sie betreffenden personenbezogenen Daten:' : 'You have the following rights with respect to the personal data concerning you:' }}
         </p>
         <ul>
-            <li>Right to access,</li>
-            <li>Right to rectification or erasure,</li>
-            <li>Right to restriction of processing,</li>
-            <li>Right to object to processing,</li>
-            <li>Right to data portability.</li>
+          <li>{{ (isGerman$ | async) ? 'Recht auf Auskunft,' : 'Right to access,' }}</li>
+          <li>{{ (isGerman$ | async) ? 'Recht auf Berichtigung oder Löschung,' : 'Right to rectification or erasure,' }}</li>
+          <li>{{ (isGerman$ | async) ? 'Recht auf Einschränkung der Verarbeitung,' : 'Right to restriction of processing,' }}</li>
+          <li>{{ (isGerman$ | async) ? 'Recht auf Widerspruch gegen die Verarbeitung,' : 'Right to object to processing,' }}</li>
+          <li>{{ (isGerman$ | async) ? 'Recht auf Datenübertragbarkeit.' : 'Right to data portability.' }}</li>
         </ul>
-        <p>You also have the right to lodge a complaint with a supervisory authority concerning the processing of your
-            personal data.</p>
-    </div>
-
-    <div class="details-container">
-        <h2>3. Collection of Personal Data When Visiting Our Website</h2>
         <p>
-            If you wish to view our website, we collect the following data, which are technically necessary for us to
-            display our website to you and to ensure stability and security (legal basis is Art. 6 para. 1 sentence 1
-            lit. f GDPR):
+          {{ (isGerman$ | async) ? 'Sie haben zudem das Recht, sich bei einer Datenschutzaufsichtsbehörde über die Verarbeitung Ihrer personenbezogenen Daten zu beschweren.' : 'You also have the right to lodge a complaint with a supervisory authority concerning the processing of your personal data.' }}
+        </p>
+      </div>
+      
+      
+
+      <div class="details-container">
+        <h2>{{ (isGerman$ | async) ? '3. Erhebung personenbezogener Daten bei Besuch unserer Website' : '3. Collection of Personal Data When Visiting Our Website' }}</h2>
+        <p>
+            {{ (isGerman$ | async) ? 'Wenn Sie unsere Website betrachten möchten, erheben wir die folgenden Daten, die für uns technisch erforderlich sind, um Ihnen unsere Website anzuzeigen und die Stabilität und Sicherheit zu gewährleisten (Rechtsgrundlage ist Art. 6 Abs. 1 S. 1 lit. f DS-GVO):' : 'If you wish to view our website, we collect the following data, which are technically necessary for us to display our website to you and to ensure stability and security (legal basis is Art. 6 para. 1 sentence 1 lit. f GDPR):' }}
         </p>
         <ul>
-            <li>IP address</li>
-            <li>Date and time of the request</li>
-            <li>Time zone difference to Greenwich Mean Time (GMT)</li>
-            <li>Content of the request (specific page)</li>
-            <li>Access status/HTTP status code</li>
-            <li>Data volume transmitted in each case</li>
-            <li>Website from which the request comes</li>
-            <li>Browser</li>
-            <li>Operating system and its interface</li>
-            <li>Language and version of the browser software.</li>
+            <li>{{ (isGerman$ | async) ? 'IP-Adresse' : 'IP address' }}</li>
+            <li>{{ (isGerman$ | async) ? 'Datum und Uhrzeit der Anfrage' : 'Date and time of the request' }}</li>
+            <li>{{ (isGerman$ | async) ? 'Zeitzonendifferenz zur Greenwich Mean Time (GMT)' : 'Time zone difference to Greenwich Mean Time (GMT)' }}</li>
+            <li>{{ (isGerman$ | async) ? 'Inhalt der Anforderung (konkrete Seite)' : 'Content of the request (specific page)' }}</li>
+            <li>{{ (isGerman$ | async) ? 'Zugriffsstatus/HTTP-Statuscode' : 'Access status/HTTP status code' }}</li>
+            <li>{{ (isGerman$ | async) ? 'Jeweils übertragene Datenmenge' : 'Data volume transmitted in each case' }}</li>
+            <li>{{ (isGerman$ | async) ? 'Website, von der die Anforderung kommt' : 'Website from which the request comes' }}</li>
+            <li>{{ (isGerman$ | async) ? 'Browser' : 'Browser' }}</li>
+            <li>{{ (isGerman$ | async) ? 'Betriebssystem und dessen Oberfläche' : 'Operating system and its interface' }}</li>
+            <li>{{ (isGerman$ | async) ? 'Sprache und Version der Browsersoftware' : 'Language and version of the browser software' }}</li>
         </ul>
     </div>
+    
 
     <div class="details-container">
-        <h2>4. Contact Form / Email Contact</h2>
-        <p>When you contact us by email or via a contact form, the data you provide (your email address, possibly your
-            name and telephone number) will be stored by us in order to answer your questions. We delete the data
-            arising in this context after storage is no longer necessary, or limit the processing if there are statutory
-            retention obligations. </p>
+        <h2>{{ (isGerman$ | async) ? '4. Kontaktformular / E-Mail-Kontakt' : '4. Contact Form / Email Contact' }}</h2>
+        <p>
+            {{ (isGerman$ | async) ? 'Wenn Sie uns per E-Mail oder über ein Kontaktformular kontaktieren, werden die von Ihnen mitgeteilten Daten (Ihre E-Mail-Adresse, ggf. Ihr Name und Ihre Telefonnummer) von uns gespeichert, um Ihre Fragen zu beantworten. Die in diesem Zusammenhang anfallenden Daten löschen wir, nachdem die Speicherung nicht mehr erforderlich ist, oder schränken die Verarbeitung ein, falls gesetzliche Aufbewahrungspflichten bestehen.' : 'When you contact us by email or via a contact form, the data you provide (your email address, possibly your name and telephone number) will be stored by us in order to answer your questions. We delete the data arising in this context after storage is no longer necessary, or limit the processing if there are statutory retention obligations.' }}
+        </p>
     </div>
+    
 
     <div class="details-container">
-        <h2>5. Hosting</h2>
-        <p>We host the contents of our website with the following provider:</p>
+        <h2>{{ (isGerman$ | async) ? '5. Hosting' : '5. Hosting' }}</h2>
+        <p>{{ (isGerman$ | async) ? 'Wir hosten die Inhalte unserer Website bei folgendem Anbieter:' : 'We host the contents of our website with the following provider:' }}</p>
         <p>All-Inkl</p>
-        <p>The provider is ALL-INKL.COM - Neue Medien Münnich, Owner René Münnich, Hauptstraße 68, 02742 Friedersdorf
-            (hereinafter All-Inkl). For details, please see All-Inkl's privacy policy: <a
+        <p>{{ (isGerman$ | async) ? 'Der Anbieter ist ALL-INKL.COM - Neue Medien Münnich, Inhaber René Münnich, Hauptstraße 68, 02742 Friedersdorf (nachfolgend All-Inkl). Einzelheiten entnehmen Sie bitte der Datenschutzerklärung von All-Inkl:' : 'The provider is ALL-INKL.COM - Neue Medien Münnich, Owner René Münnich, Hauptstraße 68, 02742 Friedersdorf (hereinafter All-Inkl). For details, please see All-Inkl\'s privacy policy:' }} <a
                 href="https://all-inkl.com/datenschutzinformationen/" target="_blank"
                 rel="noopener noreferrer">https://all-inkl.com/datenschutzinformationen/</a></p>
-
-        <p>The use of All-Inkl is based on Art. 6(1)(f) GDPR. We have a legitimate interest in having our website
-            displayed as reliably as possible. If corresponding consent has been requested, the processing is carried
-            out exclusively on the basis of Art. 6(1)(a) GDPR and § 25(1) TDDDG, insofar as the consent includes the
-            storage of cookies or access to information in the user's end device (e.g., device fingerprinting) within
-            the meaning of the TDDDG. The consent can be revoked at any time.</p>
-
-        <p><strong>Order Processing Agreement</strong></p>
-        <p>We have concluded an order processing agreement for the use of the above-mentioned service. This is a
-            contract required by data protection law, which ensures that they process the personal data of our website
-            visitors only according to our instructions and in compliance with the GDPR.</p>
+    
+        <p>{{ (isGerman$ | async) ? 'Die Nutzung von All-Inkl erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Wir haben ein berechtigtes Interesse daran, unsere Website möglichst zuverlässig darstellen zu lassen. Sofern eine entsprechende Einwilligung abgefragt wurde, erfolgt die Verarbeitung ausschließlich auf Grundlage von Art. 6 Abs. 1 lit. a DSGVO sowie § 25 Abs. 1 TTDSG, soweit die Einwilligung die Speicherung von Cookies oder den Zugriff auf Informationen im Endgerät des Nutzers (z. B. Device-Fingerprinting) im Sinne des TTDSG umfasst. Die Einwilligung ist jederzeit widerrufbar.' : 'The use of All-Inkl is based on Art. 6(1)(f) GDPR. We have a legitimate interest in having our website displayed as reliably as possible. If corresponding consent has been requested, the processing is carried out exclusively on the basis of Art. 6(1)(a) GDPR and § 25(1) TDDDG, insofar as the consent includes the storage of cookies or access to information in the user\'s end device (e.g., device fingerprinting) within the meaning of the TDDDG. The consent can be revoked at any time.' }}</p>
+    
+        <p><strong>{{ (isGerman$ | async) ? 'Auftragsverarbeitungsvertrag' : 'Order Processing Agreement' }}</strong></p>
+        <p>{{ (isGerman$ | async) ? 'Wir haben einen Auftragsverarbeitungsvertrag für die Nutzung des oben genannten Dienstes abgeschlossen. Dies ist ein datenschutzrechtlich vorgeschriebener Vertrag, der sicherstellt, dass sie die personenbezogenen Daten unserer Websitebesucher nur nach unseren Weisungen und in Übereinstimmung mit der DSGVO verarbeiten.' : 'We have concluded an order processing agreement for the use of the above-mentioned service. This is a contract required by data protection law, which ensures that they process the personal data of our website visitors only according to our instructions and in compliance with the GDPR.' }}</p>
     </div>
+    
 
 
     <div class="details-container">
-        <h2>6. Plugins and Tools</h2>
-        <p><strong>Google Fonts (Local Hosting)</strong></p>
-        <p>This site uses so-called Google Fonts provided by Google for the uniform display of fonts. The Google Fonts
-            are locally installed. A connection to Google servers does not take place.</p>
-        <p>For more information about Google Fonts, please visit <a href="https://developers.google.com/fonts/faq"
-                target="_blank" rel="noopener noreferrer">https://developers.google.com/fonts/faq</a> and refer to
-            Google's privacy policy: <a href="https://policies.google.com/privacy" target="_blank"
+        <h2>{{ (isGerman$ | async) ? '6. Plugins und Tools' : '6. Plugins and Tools' }}</h2>
+        <p><strong>{{ (isGerman$ | async) ? 'Google Fonts (lokales Hosting)' : 'Google Fonts (Local Hosting)' }}</strong></p>
+        <p>{{ (isGerman$ | async) ? 'Diese Seite verwendet sogenannte Web Fonts, die von Google bereitgestellt werden, zur einheitlichen Darstellung von Schriftarten. Die Google Fonts sind lokal installiert. Eine Verbindung zu Servern von Google findet nicht statt.' : 'This site uses so-called Google Fonts provided by Google for the uniform display of fonts. The Google Fonts are locally installed. A connection to Google servers does not take place.' }}</p>
+        <p>{{ (isGerman$ | async) ? 'Weitere Informationen zu Google Web Fonts finden Sie unter' : 'For more information about Google Fonts, please visit' }} <a href="https://developers.google.com/fonts/faq"
+                target="_blank" rel="noopener noreferrer">https://developers.google.com/fonts/faq</a> {{ (isGerman$ | async) ? 'und in der Datenschutzerklärung von Google:' : 'and refer to Google\'s privacy policy:' }} <a href="https://policies.google.com/privacy" target="_blank"
                 rel="noopener noreferrer">https://policies.google.com/privacy</a></p>
     </div>
+    
+    
 
 
     <div class="details-container">
-        <h2>7. Changes to this Privacy Policy</h2>
-        <p>We reserve the right to amend this privacy policy at any time. The current version is available on our
-            website.</p>
+        <h2>{{ (isGerman$ | async) ? '7. Änderungen dieser Datenschutzerklärung' : '7. Changes to this Privacy Policy' }}</h2>
+        <p>{{ (isGerman$ | async) ? 'Wir behalten uns das Recht vor, diese Datenschutzerklärung jederzeit zu ändern. Die aktuelle Version ist auf unserer Website verfügbar.' : 'We reserve the right to amend this privacy policy at any time. The current version is available on our website.' }}</p>
     </div>
+    
 
 </div>

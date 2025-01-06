@@ -1,29 +1,28 @@
 <header>
-  <a href="index.html">
-    <div class="logo">
-      <p class="logo-letter" style="color: #fff;">i</p>
-      <p class="logo-letter" style="color: #fff;">s</p>
-      <div class="logo-circle" style="background-color: rgba(151, 71, 255, 1);"></div>
-      <p class="logo-letter" style="color: #fff;">m</p>
-      <p class="logo-letter" style="color: #fff;">a</p>
-      <p class="logo-letter" style="color: rgba(112, 230, 28, 1);">i</p>
-      <p class="logo-letter" style="color: #fff;">l</p>
-    </div>
-  </a>
-  <nav>
-    <a routerLink="/about-me" (click)="scrollToSection('about-me')">{{ (isGerman$ | async) ? 'Über mich' : 'About Me' }}</a>
-    <a routerLink="/skills" (click)="scrollToSection('skills')">{{ (isGerman$ | async) ? 'Fähigkeiten' : 'Skills' }}</a>
-    <a routerLink="/portfolio" (click)="scrollToSection('portfolio')">{{ (isGerman$ | async) ? 'Projekte' : 'Portfolio' }}</a>
-    <a routerLink="/contact" (click)="scrollToSection('contact')">{{ (isGerman$ | async) ? 'Kontakt' : 'Contact' }}</a>
-    <div class="translation-toggle" (click)="toggleTranslation()">
-      <div class="slider" [class.active]="(isGerman$ | async)">
-        <img [src]="translationIconSrc" alt="Translate" class="thumb">
+  <div class="header-container">
+    <a href="index.html">
+      <div class="logo">
+        <p class="logo-letter" style="color: #fff;">i</p>
+        <p class="logo-letter" style="color: #fff;">s</p>
+        <div class="logo-circle" style="background-color: rgba(151, 71, 255, 1);"></div>
+        <p class="logo-letter" style="color: #fff;">m</p>
+        <p class="logo-letter" style="color: #fff;">a</p>
+        <p class="logo-letter" style="color: rgba(112, 230, 28, 1);">i</p>
+        <p class="logo-letter" style="color: #fff;">l</p>
       </div>
-    </div>
-    
-    
-    
-  </nav>
-  
-  
+    </a>
+    <nav>
+      <a routerLink="/about-me" (click)="scrollToSection('about-me')">{{ (isGerman$ | async) ? 'Über mich' : 'About Me' }}</a>
+      <a routerLink="/skills" (click)="scrollToSection('skills')">{{ (isGerman$ | async) ? 'Fähigkeiten' : 'Skills' }}</a>
+      <a routerLink="/portfolio" (click)="scrollToSection('portfolio')">{{ (isGerman$ | async) ? 'Portfolio' : 'Portfolio' }}</a>
+      <div class="translation-toggle" (click)="toggleTranslation()">
+        <div class="slider" [class.active]="(isGerman$ | async)">
+          <img [src]="translationIconSrc" alt="Translate" class="thumb">
+        </div>
+      </div>
+      
+      
+      
+    </nav>
+</div>
 </header>
