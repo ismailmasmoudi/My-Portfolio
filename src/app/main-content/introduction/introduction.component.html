@@ -19,7 +19,9 @@
           <p [ngClass]="(isGerman$ | async) ? 'german' : 'english'">{{ (isGerman$ | async) ? 'FRONTEND-ENTWICKLER' : 'FRONTEND DEVELOPER' }}</p>
         </div>
       </div>
-      <button>{{ (isGerman$ | async) ? 'Lass uns reden' : 'Let\'s Talk' }}</button>
+      <div class="lets-talk-container">
+        <button routerLink="/contact" (click)="scrollToSection('contact')">{{ (isGerman$ | async) ? 'Lass uns reden' : 'Let\'s Talk' }}</button>
+      </div>
     </div>
 
   </div>

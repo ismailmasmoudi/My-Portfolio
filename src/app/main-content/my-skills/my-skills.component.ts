@@ -48,4 +48,16 @@ export class MySkillsComponent {
       this.hoverBackgroundImageUrl = isGerman ? 'img/skills-icons/white-background-german.png' : 'img/skills-icons/white-background.svg';
     });
   }
+
+  /**
+* Scrolls the page smoothly to the element with the given ID.
+*
+* @param sectionId The ID of the HTML element to scroll to.
+*/
+  scrollToSection(sectionId: string): void {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
 }

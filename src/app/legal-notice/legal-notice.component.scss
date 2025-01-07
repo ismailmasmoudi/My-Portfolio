@@ -9,79 +9,91 @@
     transform: rotate(180deg);
 }
 
-.legal-notice-container {
-    max-width: 1440px;
-    margin: 100px;
-    margin-right: 100px;
+.legal-notice-content {
+
     display: flex;
-    flex-direction: column;
-    align-items: start;
-    gap: 30px;
-    position: relative;
-    z-index: 10;
-    background-color: transparent;
+    justify-content: center;
 
-    .purble-color {
-        color: rgba(151, 71, 255, 1);
-    }
-
-    h2 {
-        color: rgba(112, 230, 28, 1);
-
-        margin-bottom: 10px;
-        background-color: transparent;
-    }
-
-    .legal-notice-title {
+    .legal-notice-container {
+        max-width: 1240px;
+        margin: 100px;
+        margin-right: 100px;
         display: flex;
-        align-items: center;
-        gap: 32px;
-        margin-bottom: 32px;
-        z-index: 10;
-
-        .horizontal-line {
-            border-top: 4px solid rgba(151, 71, 255, 1);
-            height: 0;
-            width: 68px;
-        }
-
-        h1 {
-            color: #fff;
-            margin-bottom: 15px;
-            background-color: transparent;
-            text-align: center;
-        }
-    }
-
-
-    .details-container {
-        display: flex;
-        justify-content: space-between;
-        align-items: start;
         flex-direction: column;
-        gap: 10px;
+        gap: 30px;
+        position: relative;
+        z-index: 10;
         background-color: transparent;
 
+        .purble-color {
+            color: rgba(151, 71, 255, 1);
+        }
+
+        h2 {
+            color: rgba(112, 230, 28, 1);
+
+            margin-bottom: 10px;
+            background-color: transparent;
+        }
         p {
-            color: #fff;
             background-color: transparent;
 
-            strong {
+        }
+        .legal-notice-title {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+            margin-bottom: 32px;
+            z-index: 10;
+            background-color: transparent;
+
+           
+
+            .horizontal-line {
+                border-top: 4px solid rgba(151, 71, 255, 1);
+                height: 0;
+                width: 68px;
+            }
+
+            h1 {
+                color: #fff;
+                margin-bottom: 15px;
                 background-color: transparent;
-                color: rgba(112, 230, 28, 1);
+                text-align: center;
             }
         }
 
-        a {
-            color: rgb(77, 165, 86);
-            text-decoration: none;
+
+        .details-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            flex-direction: column;
+            gap: 10px;
             background-color: transparent;
-            cursor: pointer;
 
-            &:hover {
-                text-decoration: underline;
+            p {
+                color: #fff;
+                background-color: transparent;
+
+                strong {
+                    background-color: transparent;
+                    color: rgba(112, 230, 28, 1);
+                }
+            }
+
+            a {
+                color: rgb(77, 165, 86);
+                text-decoration: none;
+                background-color: transparent;
+                cursor: pointer;
+
+                &:hover {
+                    text-decoration: underline;
+                }
             }
         }
+
     }
 
 }

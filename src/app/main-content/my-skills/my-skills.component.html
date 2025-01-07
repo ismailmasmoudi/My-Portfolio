@@ -64,7 +64,9 @@
                     </div>
                     <p>{{ (isGerman$ | async) ? 'Zögern Sie nicht, mich zu kontaktieren. Ich freue mich darauf, mein bisheriges Wissen zu erweitern.' : 'Feel free to contact me. I look forward to expanding on my previous knowledge.' }}</p>
                 </div>
-                <button [ngClass]="(isGerman$ | async) ? 'german' : 'english'">{{ (isGerman$ | async) ? 'Kontaktieren Sie mich' : 'Get in touch' }}</button>
+                <div class="get-in-touch-container">
+                <button routerLink="/contact" (click)="scrollToSection('contact')" [ngClass]="(isGerman$ | async) ? 'german' : 'english'">{{ (isGerman$ | async) ? 'Kontaktieren Sie mich' : 'Get in touch' }}</button>
+            </div>
             </div>
         </div>
         <div class="horizontal-line"></div>
