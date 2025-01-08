@@ -89,41 +89,42 @@
                 background-color: transparent;
                 gap: 16px
             }
-            .get-in-touch-container{
+
+            .get-in-touch-container {
                 height: 80px;
                 background-color: transparent;
-                
-            button {
 
-                padding: 15px 30px;
-                border-radius: 10px;
-                background-color: #70E61C;
-                box-shadow: 4px 4px 4px 0px #00000040;
-                color: #fff;
-                border: none;
-                cursor: pointer;
-                opacity: 1;
-                transition: opacity 0.3s ease;
-                font-size: 23px;
-                transition: all 100ms ease-in-out;
+                button {
 
-                &.german {
-                    font-size: 18px;
-                }
-
-                &:hover {
-                    padding: 20px 40px;
-                    background-color: rgba(151, 71, 255, 1);
-                    color: #fff;
-                }
-
-                &:active {
                     padding: 15px 30px;
-                    color: black;
-                    background-color: white;
+                    border-radius: 10px;
+                    background-color: #70E61C;
+                    box-shadow: 4px 4px 4px 0px #00000040;
+                    color: #fff;
+                    border: none;
+                    cursor: pointer;
+                    opacity: 1;
+                    transition: opacity 0.3s ease;
+                    font-size: 23px;
+                    transition: all 100ms ease-in-out;
+
+                    &.german {
+                        font-size: 18px;
+                    }
+
+                    &:hover {
+                        padding: 20px 40px;
+                        background-color: rgba(151, 71, 255, 1);
+                        color: #fff;
+                    }
+
+                    &:active {
+                        padding: 15px 30px;
+                        color: black;
+                        background-color: white;
+                    }
                 }
             }
-        }
         }
 
         .horizontal-line {
@@ -133,7 +134,28 @@
             margin-top: 55px;
         }
     }
+
+    .second-text-container-with-button-responsive {
+        display: none;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        background-color: transparent;
+        gap: 40px;
+        width: auto;
+
+        .text-container-without-button-responsive {
+            width: 410px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-end;
+            background-color: transparent;
+            gap: 16px
+        }
+    }
 }
+
 
 .green-shadow {
     position: absolute;
@@ -145,22 +167,57 @@
     z-index: 1;
 }
 
+.get-in-touch-container-responsive {
+    height: 80px;
+    background-color: transparent;
+    display: none;
+
+    button {
+
+        padding: 15px 30px;
+        border-radius: 10px;
+        background-color: #70E61C;
+        box-shadow: 4px 4px 4px 0px #00000040;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        opacity: 1;
+        transition: opacity 0.3s ease;
+        font-size: 23px;
+        transition: all 100ms ease-in-out;
+
+        &.german {
+            font-size: 18px;
+        }
+
+        &:hover {
+            padding: 20px 40px;
+            background-color: rgba(151, 71, 255, 1);
+            color: #fff;
+        }
+
+        &:active {
+            padding: 15px 30px;
+            color: black;
+            background-color: white;
+        }
+    }
+}
 
 .heading-group {
     display: inline-flex;
     align-items: baseline;
     gap: 2px;
     background-color: transparent;
-
+    p{
+        background: transparent;
+    }
     h2 {
         font-size: 32px;
     }
 
-
     &.german {
-        // Styles for German
         gap: 4px;
-
         h2 {
             font-size: 20px;
         }
@@ -274,6 +331,235 @@
 
         img {
             transform: translateY(0) !important;
+        }
+    }
+}
+
+@media (max-width:1440px) {
+
+    .my-skills-container {
+        justify-content: flex-end;
+        padding-left: 100px;
+
+        .skills-description {
+
+            .horizontal-line {
+                width: 100px;
+            }
+
+        }
+
+        .images-container {
+            gap: 12px;
+            width: auto;
+            justify-content: center;
+        }
+    }
+}
+
+@media (max-width:1171px) {
+
+    .my-skills-container {
+        align-items: flex-end;
+        flex-direction: column-reverse;
+
+        .images-container {
+            gap: 60px;
+            width: 65%;
+            height: auto;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 30px 100px;
+            flex-direction: row;
+
+            .skills-image {
+                padding-right: 0;
+            }
+        }
+
+        .skills-description {
+            width: auto;
+            height: 100%;
+            text-align: right;
+            gap: 33px;
+            padding-left: 100px;
+
+            .horizontal-line {
+                width: 100px;
+            }
+
+            .text-button-container {
+                align-items: flex-end;
+
+                .second-text-container-with-button {
+                    display: none;
+                }
+
+                .text-container {
+                    width: auto;
+                    gap: 32px;
+
+                    &.english {
+                        gap: 32px;
+                    }
+
+                    &.german {
+                        gap: 20px;
+
+                    }
+
+                    h1 {
+                        &.german {
+                            font-size: 48px;
+                        }
+
+                        &.english {
+                            font-size: 60px;
+                        }
+                    }
+
+
+                }
+
+            }
+        }
+
+        .second-text-container-with-button-responsive {
+            display: flex;
+            padding: 30px 0px;
+            padding-right: 100px;
+
+            .get-in-touch-container-responsive {
+                height: 80px;
+                background-color: transparent;
+                display: block;
+            }
+        }
+
+    }
+
+}
+
+@media (max-width:758px) {
+    .my-skills-container {
+        padding-left: 50px;
+        .heading-group {
+            display: inline-flex;
+            align-items: baseline;
+
+            h2 {
+                font-size: 24px;
+            }}
+        .second-text-container-with-button-responsive {
+            padding-right: 50px;
+            .text-container-without-button-responsive{
+                align-items: center;
+            }
+        }
+
+        .skills-description {
+            padding-left: 50px;
+
+            .horizontal-line {
+                width: 50px;
+            }
+
+            .text-button-container {
+                .text-container {
+
+                    &.german {
+                        gap: 10px;
+                    }
+
+                    h1 {
+                        &.german {
+                            font-size: 42px;
+                        }
+
+
+                    }
+
+
+                }
+            }
+        }
+
+        .images-container {
+            padding: 30px 50px;
+            gap: 10px;
+            width: 75%;
+        }
+    }
+}
+
+@media (max-width:560px) {
+    .my-skills-container {
+        padding-left: 00px;
+        position: relative;
+        z-index: 100;
+        
+        .second-text-container-with-button-responsive {
+            padding: 20px;
+
+            .text-container-without-button-responsive{
+                width: 100%;
+                text-align: center;
+                p{
+                    background: transparent;
+                }
+            }
+        }
+      
+        .heading-group{
+          
+            .heading-style{
+                   font-size: 20px;
+               }
+        }
+        
+        .skills-description {
+            padding-left: 20px;
+
+            .horizontal-line {
+                width: 50px;
+            }
+
+            .text-button-container {
+
+
+                .text-container {
+
+
+                    &.english {
+                        gap: 0px;
+                    }
+
+                    &.german {
+                        gap: 0px;
+
+                    }
+
+                    h1 {
+                        &.german {
+                            font-size: 21px;
+                        }
+
+                        &.english {
+                            font-size: 45px;
+                        }
+                    }
+
+
+                }
+
+
+            }
+        }
+
+        .images-container {
+            padding: 30px 20px;
+            gap: 10px;
+            width: 90%;
         }
     }
 }
