@@ -38,3 +38,17 @@ h3 {
   font-weight: 400;
   line-height: 27.6px;
 }
+
+@media (max-width:1160px){
+  h1 {
+              font-size: 60px;
+          }}
+  
+  @media (max-width:560px){
+  h1 {
+              font-size: 45px;
+  }
+  p {
+      font-size: 14px;
+  }
+  }
