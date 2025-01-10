@@ -25,10 +25,10 @@
     </div>
 
   </div>
-  
-
-
-  
+  <div class="scroll-indicator">
+    <p [ngClass]="(isGerman$ | async) ? 'german' : 'english'">{{ (isGerman$ | async) ? 'Nach unten scrollen' : 'Scroll down' }}</p>
+    <img src="img/arrow-down-line.svg" alt="Scroll Down">
+  </div>
   <div class="contact-bar">
     <div class="line"></div>
     <div class="icons">
@@ -44,16 +44,15 @@
       <p class="email">ismail.masmoudi7&#64;gmail.com</p>
     </a>
   </div>
-
-  <div class="scroll-indicator">
-    <p [ngClass]="(isGerman$ | async) ? 'german' : 'english'">{{ (isGerman$ | async) ? 'Nach unten scrollen' : 'Scroll down' }}</p>
-    <img src="img/arrow-down-line.svg" alt="Scroll Down">
-  </div>
 </div>
+
 </main>
+
 <div class="band">
   <img src="img/Vector.png" alt="">
 </div>
+
+
 
 
 

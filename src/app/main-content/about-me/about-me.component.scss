@@ -84,6 +84,7 @@
     .description-image {
         width: 48px !important;
         height: 48px;
+        background: transparent;
 
         img {
             width: 32px;
@@ -91,7 +92,7 @@
             padding: 8px;
             gap: 10px; // Needs display: inline-flex or similar to affect gap
             transition: all 100ms ease-out;
-
+            background: transparent;
             &:hover {
                 width: 48px;
                 height: 48px;

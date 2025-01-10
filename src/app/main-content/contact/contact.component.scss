@@ -15,12 +15,16 @@
       align-items: flex-start;
       gap: 12px;
       margin-bottom: 16px;
+      background: transparent;
+
 
     }
 
     .span-button-container {
       display: flex;
       flex-direction: column;
+      background: transparent;
+
     }
 
 
@@ -30,21 +34,26 @@
       justify-content: center;
       align-items: center;
       height: 25px;
+      background: transparent;
 
       img {
         &:hover {
           cursor: pointer;
         }
+
+        background: transparent;
       }
 
       p {
         color: #fff;
         font-size: 14px !important;
+        background: transparent;
 
         a {
           color: #9747FF;
           text-decoration: none;
           cursor: pointer;
+          background: transparent;
 
           &:hover {
             text-decoration: underline;
@@ -58,6 +67,7 @@
     display: flex;
     justify-content: space-around;
     flex-direction: column;
+    background: transparent;
 
 
   }
@@ -69,6 +79,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background: transparent;
 
     button {
       width: 253px;
@@ -80,6 +91,8 @@
       color: #fff;
       font-size: 20px;
       cursor: pointer;
+      background: transparent;
+
     }
   }
 
@@ -117,6 +130,9 @@
     margin: 0;
     max-width: 1240px;
     width: 100%;
+    position: relative;
+    z-index: 100;
+    background: transparent;
 
     .input-container-error-message {
       display: flex;
@@ -125,6 +141,8 @@
       gap: 5px;
       height: 72px;
       margin-bottom: 10px;
+      background: transparent;
+
     }
 
     .name-input-container-error-message {
@@ -132,6 +150,8 @@
 
       .error-message.min-length {
         display: block;
+        background: transparent;
+
       }
     }
 
@@ -139,6 +159,8 @@
       display: flex;
       flex-direction: column;
       height: 231px;
+      background: transparent;
+
     }
 
     .message-textarea-container-error-message {
@@ -146,6 +168,8 @@
 
       .error-message.min-length {
         display: block;
+        background: transparent;
+
       }
 
     }
@@ -158,6 +182,7 @@
     align-items: left;
     max-width: 474px;
     gap: 24px;
+    background: transparent;
 
     h2 {
       color: #fff;
@@ -169,6 +194,8 @@
       justify-content: space-between;
       align-items: left;
       gap: 16px;
+      background: transparent;
+
     }
   }
 
@@ -180,8 +207,8 @@
   .textarea-container {
     position: relative;
     display: block;
-    background: rgba(20, 29, 47, 1);
     width: 617px;
+    background: transparent;
 
     input,
     textarea {
@@ -247,6 +274,7 @@
     text-align: left;
     color: rgba(230, 28, 64, 1);
     display: block;
+    background: transparent;
   }
 
 
@@ -311,5 +339,120 @@
     img {
       cursor: pointer;
     }
+  }
+}
+
+@media (max-width:1440px) {
+  .contact-container {
+    .contact-title {
+      max-width: 1440px;
+
+    }
+
+    .contact-form {
+      justify-content: center;
+      max-width: 1240px;
+
+    }
+  }
+  .go-up {
+    margin-right: 100px;
+  }
+}
+
+@media (max-width:1160px) {
+  .contact-container {
+    .contact-title {
+      .horizontal-line {
+        &.left-line {
+          width: 30%;
+        }
+      }
+    }
+
+   
+
+    .contact-form {
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+      margin: 0 30px;
+    }
+
+    .container-left {
+      flex-direction: column;
+      align-items: flex-start;
+      max-width: 617px;
+
+      gap: 24px;
+
+      .details-container {
+
+        align-items: flex-start;
+        gap: 16px;
+
+        p {
+          text-align: flex-start;
+        }
+      }
+    }
+
+  }
+  .go-up {
+    margin-right: 100px;
+  }
+}
+
+@media (max-width:790px) {
+  .contact-container {
+    .contact-title {
+      .horizontal-line {
+        &.left-line {
+          width: 20%;
+        }
+      }
+    }
+    .container-right {
+      max-width: 400px;
+    }
+
+    .input-container,
+    .textarea-container {
+      width: 400px;
+    }
+
+    .container-left {
+      max-width: 400px;
+    }
+  }
+  .go-up {
+    margin-right: 50px;
+  }
+}
+
+@media (max-width:450px) {
+  .contact-container {
+    .contact-title {
+      .horizontal-line {
+        &.left-line {
+          width: 20%;
+        }
+      }
+    }
+    .container-right {
+      max-width: 280px;
+    }
+
+    .input-container,
+    .textarea-container {
+      width: 280px;
+    }
+
+    .container-left {
+      max-width: 280px;
+    }
+  }
+  .go-up {
+    margin-right: 20px;
   }
 }
