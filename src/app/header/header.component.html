@@ -11,7 +11,7 @@
         <p class="logo-letter" style="color: #fff;">l</p>
       </div>
     </a>
-    <nav>
+    <nav class="main-nav">
       <a routerLink="/about-me" (click)="scrollToSection('about-me')">{{ (isGerman$ | async) ? 'Über mich' : 'About Me' }}</a>
       <a routerLink="/skills" (click)="scrollToSection('skills')">{{ (isGerman$ | async) ? 'Fähigkeiten' : 'Skills' }}</a>
       <a routerLink="/portfolio" (click)="scrollToSection('portfolio')">{{ (isGerman$ | async) ? 'Portfolio' : 'Portfolio' }}</a>
@@ -20,9 +20,25 @@
           <img [src]="translationIconSrc" alt="Translate" class="thumb">
         </div>
       </div>
-      
-      
-      
     </nav>
-</div>
+ 
+
+    <div class="burger-menu-icon" (click)="toggleBurgerMenu()">
+      <img [src]="burgerMenuIconSrc" alt="Menu">
+    </div>
+    <div class="burger-menu" [class.open]="showBurgerMenu">
+ <div class="menu-content">
+  <nav>
+        <a routerLink="/about-me" (click)="scrollToSection('about-me'); closeBurgerMenu()">{{ (isGerman$ | async) ? 'Über mich' : 'About Me' }}</a>
+        <a routerLink="/skills" (click)="scrollToSection('skills'); closeBurgerMenu()">{{ (isGerman$ | async) ? 'Fähigkeiten' : 'Skills' }}</a>
+        <a routerLink="/portfolio" (click)="scrollToSection('portfolio'); closeBurgerMenu()">{{ (isGerman$ | async) ? 'Portfolio' : 'Portfolio' }}</a>
+        <div class="translation-toggle" (click)="toggleTranslation(); closeBurgerMenu()">
+          <div class="slider" [class.active]="(isGerman$ | async)">
+            <img [src]="translationIconSrc" alt="Translate" class="thumb">
+          </div>
+        </div>
+      </nav>
+    </div>
+    </div>
+  </div>
 </header>
