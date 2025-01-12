@@ -270,7 +270,7 @@
     img {
         position: absolute;
         top: 467px;
-        left: -2px;
+        left: 0;
         width: 100%;
         height: 767px;
         display: block;
@@ -417,15 +417,14 @@
         }
 
         .scroll-indicator {
-            top: 836px;
-            right: 0;
+            display: none;
         }
     }
 
 
     .band img {
         top: 400px;
-        left: -2px;
+        left: 0px;
     }
 
 }
@@ -436,7 +435,7 @@
 @media (max-width:560px) {
 
     .main-container {
-
+        margin-bottom: 100px;
 
         .introduction-container {
             margin: 0 20px;
@@ -445,33 +444,40 @@
             .image-and-introduction-content {
                 .image-container {
                     img:nth-child(1) {
-                        width: 320px;
+                        width: 286px;
                         height: 350px;
-                        padding-left: 45px;
+                        padding-left: 32px;
                     }
 
                     img:nth-child(2) {
-                        top: 10px;
-                        left: 27px;
-                        height: 358px;
+                        top: 0px;
+                        left: 0px;
+                        height: 356px;
                     }
                 }
 
                 .introduction-content {
                     gap: 12px;
 
+                    .lets-talk-container {
+
+                        button {
+                            font-size: 16px;
+                        }
+                    }
+
                     .title {
                         .title-left {
-                            height: 30px;
-                            width: 58px;
+                            height: 50px;
+                            width: 32px;
 
                             p {
                                 &.english {
-                                    font-size: 48px;
+                                    font-size: 27px;
                                 }
 
                                 &.german {
-                                    font-size: 32px;
+                                    font-size: 18px;
                                 }
                             }
                         }
@@ -479,6 +485,7 @@
                         .title-right {
                             p:nth-child(1) {
                                 font-size: 28px;
+                                height: 60px;
                             }
 
                             p:nth-child(2) {
@@ -497,93 +504,27 @@
         }
 
         .contact-bar {
-            top: 650px;
+            top: 590px;
             height: 40px;
-            gap: 20px;
+            gap: 10px;
+            left: -20px;
 
             .icons {
-                width: 40%;
+                width: 174px;
+            }
+            .line {
+                width: 30%;
             }
         }
 
-        .scroll-indicator {
-            top: 700px;
-            right: 0;
-        }
+
     }
 
 
 
     .band img {
         top: 358px;
-        height:207px;
+        height: 207px;
     }
 
 }
-
-
-// @media (max-width:560px) {
-//     .main-container .contact-bar {
-//         top: 703px;
-//         height: 40px;
-
-//         .line {
-//             width: 50px;
-
-//         }
-
-//         .main-container .scroll-indicator {
-//             top: 736px;
-//             right: 50px;
-//         }
-
-
-//     }
-
-//     .main-container {
-//         .introduction-container {
-
-//             .image-and-introduction-content {
-
-//                 .image-container {
-//                     img:nth-child(1) {
-//                         width: 378px;
-//                         height: 414px;
-//                     }
-
-//                     img:nth-child(2) {
-//                         top: 0px;
-//                         width: 400px;
-//                         height: 415px;
-//                         right: 50px;
-//                         left: 50px;
-//                     }
-//                 }
-//             }
-//         }
-
-//         .contact-bar {
-//             top: 703px;
-//             height: 40px;
-
-//             .line {
-//                 width: 50px;
-
-//             }
-//         }
-//         .scroll-indicator {
-//             top: 736px;
-//             right: 50px;
-//         }
-
-//     }
-//     .band img {
-//         position: absolute;
-//         top: 300px;
-//         left: -2px;
-//         width: 100%;
-//         height: auto;
-//         display: block;
-//         background-color: transparent;
-//     }
-// }

@@ -31,6 +31,7 @@
             align-items: flex-end;
             background-color: transparent;
             gap: 24px;
+
             h1 {
                 background: transparent;
                 text-align: right;
@@ -167,6 +168,7 @@
     z-index: 1;
 }
 
+
 .get-in-touch-container-responsive {
     height: 80px;
     background-color: transparent;
@@ -209,15 +211,18 @@
     align-items: baseline;
     gap: 2px;
     background-color: transparent;
-    p{
+
+    p {
         background: transparent;
     }
+
     h2 {
         font-size: 32px;
     }
 
     &.german {
         gap: 4px;
+
         h2 {
             font-size: 20px;
         }
@@ -355,6 +360,11 @@
             justify-content: center;
         }
     }
+
+    .green-shadow {
+        top: 2450px;
+        filter: blur(22px);
+    }
 }
 
 @media (max-width:1171px) {
@@ -438,21 +448,33 @@
 
     }
 
+    .green-shadow {
+        top: 2450px;
+
+    }
+
 }
 
-@media (max-width:758px) {
+
+
+
+@media (max-width:790px) {
     .my-skills-container {
         padding-left: 50px;
+
         .heading-group {
             display: inline-flex;
             align-items: baseline;
 
             h2 {
-                font-size: 24px;
-            }}
+                font-size: 20px;
+            }
+        }
+
         .second-text-container-with-button-responsive {
             padding-right: 50px;
-            .text-container-without-button-responsive{
+
+            .text-container-without-button-responsive {
                 align-items: center;
             }
         }
@@ -490,33 +512,61 @@
             width: 75%;
         }
     }
+
+    .green-shadow {
+        top: 2100px;
+        width: 250px;
+        height: 550px;
+    }
 }
+
 
 @media (max-width:560px) {
     .my-skills-container {
         padding-left: 00px;
         position: relative;
         z-index: 100;
-        
-        .second-text-container-with-button-responsive {
-            padding: 20px;
+        padding-top: 100px;
 
-            .text-container-without-button-responsive{
+        .second-text-container-with-button-responsive {
+            padding: 10px 15px;
+            position: relative;
+            z-index: 100;
+            background-color: transparent;
+
+            .get-in-touch-container-responsive {
+
+                button {
+                    font-size: 16px;
+                }
+            }
+
+            .text-container-without-button-responsive {
                 width: 100%;
                 text-align: center;
-                p{
+
+                p {
                     background: transparent;
+                    text-align: center;
+
                 }
             }
         }
-      
-        .heading-group{
-          
-            .heading-style{
-                   font-size: 20px;
-               }
+
+        .heading-group {
+
+            .heading-style {
+                font-size: 20px;
+
+            }
+
+            &.german {
+                h2 {
+                    font-size: 14px;
+                }
+            }
         }
-        
+
         .skills-description {
             padding-left: 20px;
 
@@ -525,7 +575,6 @@
             }
 
             .text-button-container {
-
 
                 .text-container {
 
@@ -561,5 +610,11 @@
             gap: 10px;
             width: 90%;
         }
+    }
+
+    .green-shadow {
+        top: 500px;
+        width: 150px;
+        height: 550px;
     }
 }

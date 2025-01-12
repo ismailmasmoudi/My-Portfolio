@@ -7,6 +7,7 @@
     background-color: transparent;
     z-index: 0;
     transform: rotate(180deg);
+    filter: blur(22px);
 }
 
 .legal-notice-content {
@@ -35,10 +36,12 @@
             margin-bottom: 10px;
             background-color: transparent;
         }
+
         p {
             background-color: transparent;
 
         }
+
         .legal-notice-title {
             display: flex;
             align-items: center;
@@ -47,7 +50,7 @@
             z-index: 10;
             background-color: transparent;
 
-           
+
 
             .horizontal-line {
                 border-top: 4px solid rgba(151, 71, 255, 1);
@@ -95,5 +98,93 @@
         }
 
     }
+
+}
+
+
+@media (max-width: 1160px) {
+    .legal-notice-content {
+        .legal-notice-container {
+            margin: 50px 50px;
+            margin-right: 50px;
+        }
+    }
+
+
+}
+
+
+@media (max-width: 790px) {
+
+    .legal-notice-content {
+        .legal-notice-container {
+            .legal-notice-title {
+                gap: 12px;
+                margin-bottom: 0;
+
+                h1 {
+                    font-size: 44px;
+                    margin-bottom: 0px;
+                }
+            }
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 0px;
+        }
+    }
+}
+
+
+@media (max-width:560px) {
+    .legal-notice-content {
+        .legal-notice-container {
+            margin: 25px 25px;
+            margin-right: 25px;
+
+            .legal-notice-title {
+                gap: 12px;
+                margin-bottom: 0;
+
+                h1 {
+                    font-size: 36px;
+
+                    margin-bottom: 0px;
+                }
+            }
+
+            h2 {
+                font-size: 20px;
+            }
+        }
+    }
+    .green-shadow{
+        top: 450px;
+        width: 220px;
+        height: 450px;
+    }
+
+}
+
+
+@media (max-width:400px) {
+    .legal-notice-content {
+        .legal-notice-container {
+            gap: 18px;
+
+            .legal-notice-title {
+                h1 {
+                    font-size: 29px;
+                    margin-bottom: 0px;
+                }
+            }
+
+            h2 {
+                font-size: 18px;
+            }
+        }
+    }
+
 
 }

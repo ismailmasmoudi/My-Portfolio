@@ -3,7 +3,7 @@ header {
   justify-content: center;
   width: 100%;
   position: sticky;
-  top: 0;
+  top: -1px;
   z-index: 1000;
   height: max-content;
 
@@ -154,7 +154,7 @@ header {
     .burger-menu {
       display: none;
       position: fixed;
-      top: 109px;
+      top: 108px;
       left: 0;
       width: 100%;
       height: 100%;
@@ -268,6 +268,7 @@ header {
   }
 }
 
+
 @media (max-width:1160px) {
   header {
     .header-container {
@@ -276,11 +277,29 @@ header {
   }
 }
 
+
 @media (max-width: 790px) {
   header {
     .header-container {
       .burger-menu {
-        transition: transform 0.3s ease-in-out;
+        animation: slideIn 1s ease-in-out;
+
+        @keyframes slideIn {
+          from {
+            transform: translateX(100%);
+            opacity: 0;
+          }
+      
+          50% {
+            transform: translateX(0);
+            opacity: 1;
+          }
+      
+          to {
+            transform: translateX(0);
+            opacity: 1;
+          }
+        }
         &.open {
           transform: translateX(0%);
         }
@@ -296,7 +315,8 @@ header {
   }
 }
 
-@media (max-width:500px) {
+
+@media (max-width:560px) {
   header {
     .header-container {
       padding: 37px 25px;

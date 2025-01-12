@@ -167,6 +167,7 @@
     transform: rotate(180deg);
     background-color: transparent;
     z-index: 1;
+    filter: blur(22px);
 }
 
 @media (max-width:1440px) {
@@ -183,10 +184,12 @@
 
                 .project-left {
                     align-items: center !important;
+
                     p {
                         text-align: center;
                     }
                 }
+
                 .project-image {
                     padding: 0px;
                 }
@@ -221,6 +224,10 @@
 
         }
     }
+
+    .purple-shadow {
+        top: 3190px;
+    }
 }
 
 
@@ -231,7 +238,7 @@
             justify-content: center;
             flex-direction: column;
             align-items: center;
-           
+
             .project-item {
                 gap: 0;
                 height: auto;
@@ -240,10 +247,16 @@
                 align-items: center;
                 position: relative;
                 z-index: 100;
-                &.responsive-row-reverse{
+
+                h3 {
+                    text-align: center;
+                }
+
+                &.responsive-row-reverse {
                     background-color: transparent;
                     flex-direction: column-reverse !important;
                 }
+
                 .project-image {
                     height: 100%;
                     z-index: 10;
@@ -256,7 +269,7 @@
                     z-index: 10;
                     background-color: transparent;
                     align-items: center;
-                    
+
                     .project-description {
                         gap: 15px;
                         background-color: transparent;
@@ -282,10 +295,18 @@
             }
         }
     }
-    .purple-shadow{
-        top: 3890px;
+
+    .purple-shadow {
+        top: 4090px;
         width: 400px;
         height: 478px;
+    }
+}
+
+
+@media (max-width:790px) {
+    .purple-shadow {
+        top: 3590px;
     }
 }
 
@@ -332,6 +353,8 @@
 
     .portfolio {
         .portfolio-container {
+            padding-top: 100px;
+
             .portfolio-text {
                 padding: 0 5px;
             }
@@ -360,18 +383,16 @@
 
     }
 
-    .purple-shadow{
-        top: 3417px;
-              width: 400px;
-              height: 278px;
-      }
+    .purple-shadow {
+        top: 2971px;
+        width: 400px;
+        height: 278px;
+    }
 }
 
 @media (max-width:383px) {
-    .purple-shadow{
-              top: 3717px;
-              width: 400px;
-              height: 278px;
-      }
+    .purple-shadow {
+        top: 3471px;
+    }
 
 }

@@ -7,6 +7,7 @@
     background-color: transparent;
     z-index: 0;
     transform: rotate(180deg);
+    filter: blur(22px);
 }
 
 .privacy-policy-content {
@@ -27,7 +28,6 @@
 
         h2 {
             color: rgba(112, 230, 28, 1);
-
             margin-bottom: 10px;
             background-color: transparent;
         }
@@ -39,6 +39,7 @@
             margin-bottom: 32px;
             z-index: 10;
             background: transparent;
+
             .horizontal-line {
                 border-top: 4px solid rgba(151, 71, 255, 1);
                 height: 0;
@@ -61,6 +62,10 @@
             flex-direction: column;
             gap: 10px;
             background-color: transparent;
+
+            ul {
+                background: transparent;
+            }
 
             li {
                 color: #fff;
@@ -95,5 +100,86 @@
             }
         }
 
+    }
+}
+
+
+@media (max-width: 1160px) {
+    .privacy-policy-content {
+        .privacy-policy-container {
+            margin: 50px 50px;
+            margin-right: 50px;
+        }
+    }
+
+
+}
+
+
+@media (max-width: 790px) {
+    .privacy-policy-content {
+        .privacy-policy-container {
+            .privacy-policy-title {
+                gap: 12px;
+                margin-bottom: 0;
+
+                h1 {
+                    font-size: 44px;
+                    margin-bottom: 0px;
+                }
+            }
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 0px;
+        }
+    }
+}
+
+
+@media (max-width:560px) {
+    .privacy-policy-content {
+        .privacy-policy-container {
+            margin: 25px 25px;
+            margin-right: 25px;
+            .privacy-policy-title {
+                gap: 12px;
+                margin-bottom: 0;
+
+                h1 {
+                    font-size: 36px;
+
+                    margin-bottom: 0px;
+                }
+            }
+            h2 {
+                font-size: 20px;
+            }
+        }
+    }
+    .green-shadow{
+        top: 450px;
+        width: 220px;
+        height: 450px;
+    }
+   
+}
+
+
+@media (max-width:400px) {
+    .privacy-policy-content {
+        .privacy-policy-container {
+            gap: 18px;
+            .privacy-policy-title {
+                h1 {
+                    font-size: 29px;
+                    margin-bottom: 0px;
+                }
+            }
+            h2 {
+                font-size: 18px;
+            }
+        }
     }
 }

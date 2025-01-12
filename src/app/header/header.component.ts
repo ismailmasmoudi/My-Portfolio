@@ -23,6 +23,10 @@ export class HeaderComponent {
   }
 
 
+  /**
+   * @description Toggles the application's language between German and English.
+   * Updates the translation icon and toggles the 'active' class on the toggle element.
+   */
   toggleTranslation(): void {
     this.translationService.toggleTranslation();
     const toggleElement = document.querySelector('.translation-toggle');
@@ -32,6 +36,10 @@ export class HeaderComponent {
   }
 
 
+  /**
+   * @description Toggles the burger menu's visibility.
+   * Updates the burger menu icon, triggers change detection, and toggles the 'open' class.
+   */
   toggleBurgerMenu() {
     this.showBurgerMenu = !this.showBurgerMenu;
     this.burgerMenuIconSrc = this.showBurgerMenu ? 'img/close.svg' : 'img/menu.svg';
@@ -43,6 +51,10 @@ export class HeaderComponent {
   }
 
 
+   /**
+   * @description Closes the burger menu.
+   * Sets showBurgerMenu to false, resets the burger menu icon, and triggers change detection.
+   */
   closeBurgerMenu() {
     this.showBurgerMenu = false;
     this.burgerMenuIconSrc = 'img/menu.svg';
@@ -50,6 +62,11 @@ export class HeaderComponent {
   }
 
 
+  /**
+   * @description Scrolls to a specific section on the page.
+   * 
+   * @param sectionId - The ID of the section to scroll to.
+   */
   scrollToSection(sectionId: string): void {
     const element = document.getElementById(sectionId);
     if (element) {

@@ -32,6 +32,7 @@
         <a routerLink="/about-me" (click)="scrollToSection('about-me'); closeBurgerMenu()">{{ (isGerman$ | async) ? 'Über mich' : 'About Me' }}</a>
         <a routerLink="/skills" (click)="scrollToSection('skills'); closeBurgerMenu()">{{ (isGerman$ | async) ? 'Fähigkeiten' : 'Skills' }}</a>
         <a routerLink="/portfolio" (click)="scrollToSection('portfolio'); closeBurgerMenu()">{{ (isGerman$ | async) ? 'Portfolio' : 'Portfolio' }}</a>
+        <a routerLink="/contact" (click)="scrollToSection('contact'); closeBurgerMenu()">{{ (isGerman$ | async) ? 'contact' : 'Contact' }}</a>
         <div class="translation-toggle" (click)="toggleTranslation(); closeBurgerMenu()">
           <div class="slider" [class.active]="(isGerman$ | async)">
             <img [src]="translationIconSrc" alt="Translate" class="thumb">

@@ -18,9 +18,10 @@ export class MySkillsComponent {
 
   constructor() {
     this.isGerman$.subscribe(isGerman => {
-      this.updateHoverBackgroundImageUrl(); // Update on language change
+      this.updateHoverBackgroundImageUrl(); 
     });
   }
+
 
   /**
    * @method onSkillImageHover
@@ -43,11 +44,18 @@ export class MySkillsComponent {
     this.skillImage.nativeElement.src = 'img/skills-icons/11Continually-learning.svg';
   }
 
-  updateHoverBackgroundImageUrl() { // Update method
+
+  /**
+ * Updates the URL of the hover background image based on the current language.
+ * Subscribes to the `isGerman$` observable to react to language changes
+ * and sets the `hoverBackgroundImageUrl` accordingly.
+ */
+  updateHoverBackgroundImageUrl() {
     this.isGerman$.subscribe(isGerman => {
       this.hoverBackgroundImageUrl = isGerman ? 'img/skills-icons/white-background-german.png' : 'img/skills-icons/white-background.svg';
     });
   }
+
 
   /**
 * Scrolls the page smoothly to the element with the given ID.

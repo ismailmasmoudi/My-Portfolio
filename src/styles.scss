@@ -8,6 +8,23 @@
   background-color: #141D2F;
 }
 
+::-webkit-scrollbar {
+  width: 5px; 
+}
+
+::-webkit-scrollbar-track {
+  background: #141D2F;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(151, 71, 255, 1); 
+  border-radius: 5px; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(151, 71, 255, 0.8);
+}
+
 h1 {
   font-size: 90px;
   font-weight: 700;

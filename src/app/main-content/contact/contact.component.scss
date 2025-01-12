@@ -72,9 +72,6 @@
 
   }
 
-
-
-
   .span-button-container {
     display: flex;
     justify-content: center;
@@ -275,6 +272,9 @@
     color: rgba(230, 28, 64, 1);
     display: block;
     background: transparent;
+    span{
+      background: transparent;
+    }
   }
 
 
@@ -426,13 +426,14 @@
     }
   }
   .go-up {
-    margin-right: 50px;
+    margin-right: 100px;
   }
 }
 
-@media (max-width:450px) {
+@media (max-width:560px) {
   .contact-container {
     .contact-title {
+    padding-top: 100px;
       .horizontal-line {
         &.left-line {
           width: 20%;
@@ -453,6 +454,6 @@
     }
   }
   .go-up {
-    margin-right: 20px;
+    margin-right: 25px;
   }
 }
