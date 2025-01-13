@@ -25,6 +25,16 @@
   background: rgba(151, 71, 255, 0.8);
 }
 
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px rgba(20, 29, 47, 1) inset !important;
+    -webkit-text-fill-color: #fff !important; // Text color for autofilled fields
+}
+
+
+
 h1 {
   font-size: 90px;
   font-weight: 700;
