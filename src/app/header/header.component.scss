@@ -73,7 +73,7 @@ header {
           width: 0;
           height: 2px;
           background-color: rgba(151, 71, 255, 1);
-          transition: width 0.3s ease;
+          transition: width 90ms ease;
         }
 
         &:hover::before {
@@ -103,7 +103,7 @@ header {
         cursor: pointer;
         position: relative;
         display: inline-block;
-        /* Important for positioning */
+
 
 
         .slider {
@@ -112,7 +112,7 @@ header {
           position: absolute;
           top: 0;
           left: 0;
-          transition: background-color 0.3s;
+          transition: background-color 90ms;
           background-color: white;
           border-radius: 50px;
 
@@ -129,7 +129,7 @@ header {
             position: absolute;
             top: 2px;
             left: 2px;
-            transition: transform 0.3s;
+            transition: transform 90ms;
           }
 
 
@@ -206,7 +206,7 @@ header {
               width: 0;
               height: 2px;
               background-color: rgba(151, 71, 255, 1);
-              transition: width 0.3s ease;
+              transition: width 90ms ease;
             }
             &:hover::before {
               width: 55.5px;
@@ -241,7 +241,7 @@ header {
           position: absolute;
           top: 0;
           left: 0;
-          transition: background-color 0.3s;
+          transition: background-color 90ms;
           background-color: white;
           border-radius: 50px;
 
@@ -258,7 +258,7 @@ header {
             position: absolute;
             top: 2px;
             left: 2px;
-            transition: transform 0.3s;
+            transition: transform 90ms;
           }
           &.active .thumb {
             transform: translateX(30px);

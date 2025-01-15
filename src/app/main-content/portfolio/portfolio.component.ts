@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TranslationService } from '../../services/translation.service'; // Adjust the import path if needed
+import { TranslationService } from '../../services/translation.service';
 
 
 @Component({

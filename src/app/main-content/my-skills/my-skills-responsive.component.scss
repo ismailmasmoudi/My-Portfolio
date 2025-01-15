@@ -1,0 +1,275 @@
+@media (max-width:1440px) {
+
+    .my-skills-container {
+        justify-content: flex-end;
+        padding-left: 100px;
+
+        .skills-description {
+
+            .horizontal-line {
+                width: 100px;
+            }
+
+        }
+
+        .images-container {
+            gap: 12px;
+            width: auto;
+            justify-content: center;
+        }
+    }
+
+    .green-shadow {
+        top: 2450px;
+        filter: blur(22px);
+    }
+}
+
+@media (max-width:1171px) {
+
+    .my-skills-container {
+        align-items: flex-end;
+        flex-direction: column-reverse;
+
+        .images-container {
+            gap: 60px;
+            width: 65%;
+            height: auto;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 30px 100px;
+            flex-direction: row;
+
+            .skills-image {
+                padding-right: 0;
+            }
+        }
+
+        .skills-description {
+            width: auto;
+            height: 100%;
+            text-align: right;
+            gap: 33px;
+            padding-left: 100px;
+
+            .horizontal-line {
+                width: 100px;
+            }
+
+            .text-button-container {
+                align-items: flex-end;
+
+                .second-text-container-with-button {
+                    display: none;
+                }
+
+                .text-container {
+                    width: auto;
+                    gap: 32px;
+
+                    &.english {
+                        gap: 32px;
+                    }
+
+                    &.german {
+                        gap: 20px;
+
+                    }
+
+                    h1 {
+                        &.german {
+                            font-size: 48px;
+                        }
+
+                        &.english {
+                            font-size: 60px;
+                        }
+                    }
+
+
+                }
+
+            }
+        }
+
+        .second-text-container-with-button-responsive {
+            display: flex;
+            padding: 30px 0px;
+            padding-right: 100px;
+
+            .get-in-touch-container-responsive {
+                height: 80px;
+                background-color: transparent;
+                display: block;
+            }
+        }
+
+    }
+
+    .green-shadow {
+        top: 2450px;
+
+    }
+
+}
+
+@media (max-width:790px) {
+    .my-skills-container {
+        padding-left: 50px;
+
+        .heading-group {
+            display: inline-flex;
+            align-items: baseline;
+
+            h2 {
+                font-size: 20px;
+            }
+        }
+
+        .second-text-container-with-button-responsive {
+            padding-right: 50px;
+
+            .text-container-without-button-responsive {
+                align-items: center;
+            }
+        }
+
+        .skills-description {
+            padding-left: 50px;
+
+            .horizontal-line {
+                width: 50px;
+            }
+
+            .text-button-container {
+                .text-container {
+
+                    &.german {
+                        gap: 10px;
+                    }
+
+                    h1 {
+                        &.german {
+                            font-size: 42px;
+                        }
+
+
+                    }
+
+
+                }
+            }
+        }
+
+        .images-container {
+            padding: 30px 50px;
+            gap: 10px;
+            width: 75%;
+        }
+    }
+
+    .green-shadow {
+        top: 2100px;
+        width: 250px;
+        height: 550px;
+    }
+}
+
+
+@media (max-width:560px) {
+    .my-skills-container {
+        padding-left: 00px;
+        position: relative;
+        z-index: 100;
+        padding-top: 100px;
+
+        .second-text-container-with-button-responsive {
+            padding: 10px 15px;
+            position: relative;
+            z-index: 100;
+            background-color: transparent;
+
+            .get-in-touch-container-responsive {
+
+                button {
+                    font-size: 16px;
+                }
+            }
+
+            .text-container-without-button-responsive {
+                width: 100%;
+                text-align: center;
+
+                p {
+                    background: transparent;
+                    text-align: center;
+
+                }
+            }
+        }
+
+        .heading-group {
+
+            .heading-style {
+                font-size: 20px;
+
+            }
+
+            &.german {
+                h2 {
+                    font-size: 14px;
+                }
+            }
+        }
+
+        .skills-description {
+            padding-left: 20px;
+
+            .horizontal-line {
+                width: 50px;
+            }
+
+            .text-button-container {
+
+                .text-container {
+
+
+                    &.english {
+                        gap: 0px;
+                    }
+
+                    &.german {
+                        gap: 0px;
+
+                    }
+
+                    h1 {
+                        &.german {
+                            font-size: 21px;
+                        }
+
+                        &.english {
+                            font-size: 45px;
+                        }
+                    }
+
+
+                }
+
+
+            }
+        }
+
+        .images-container {
+            padding: 30px 20px;
+            gap: 10px;
+            width: 90%;
+        }
+    }
+
+    .green-shadow {
+        top: 500px;
+        width: 150px;
+        height: 550px;
+    }
+}

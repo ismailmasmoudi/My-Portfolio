@@ -19,6 +19,7 @@ export class ContactComponent implements OnInit {
   checkboxImageUrl = 'img/Check-button.svg';
   showConfirmationLayer = false;
   mailTest = true;
+  
   /**
     * Injected HttpClient service for making HTTP requests.
     */

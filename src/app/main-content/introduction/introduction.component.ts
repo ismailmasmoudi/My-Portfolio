@@ -7,7 +7,7 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './introduction.component.html',
-  styleUrl: './introduction.component.scss'
+  styleUrls: ['./introduction.component.scss', './introduction-responsive.component.scss'],
 })
 export class IntroductionComponent {
   translationService = inject(TranslationService);

@@ -1,0 +1,240 @@
+@media (max-width:1440px) {
+    .main-container {
+        margin-bottom: 170px;
+
+        .introduction-container {
+            margin-right: 100px;
+            margin-left: 100px;
+            width: 100%;
+
+            .image-and-introduction-content {
+                flex-direction: column;
+
+                .image-container {
+                    img:nth-child(1) {
+                        width: 534px;
+                        height: 710px;
+                    }
+
+                    img:nth-child(2) {
+                        top: 40px;
+                        left: 25px;
+                    }
+                }
+            }
+        }
+
+        .contact-bar {
+            top: 1055px;
+            height: 40px;
+            left: -100px;
+
+        }
+
+        .scroll-indicator {
+            top: 1200px;
+            right: 0;
+        }
+    }
+}
+
+@media (max-width:1160px) {
+    .main-container {
+        .contact-bar {
+            gap: 24px;
+            width: 100%;
+
+            .email {
+                display: none;
+            }
+
+            .line {
+                width: 43%;
+            }
+
+            .icons {
+                width: 30%;
+            }
+        }
+    }
+
+    .band {
+        img {
+            top: 642px;
+            height: 283px;
+        }
+    }
+}
+
+@media (max-width:790px) {
+
+    .main-container {
+        .introduction-container {
+            margin: 0 100px;
+
+
+            .image-and-introduction-content {
+                .image-container {
+                    img:nth-child(1) {
+                        width: 458px;
+                        height: 470px;
+                        padding-left: 100px;
+                    }
+
+                    img:nth-child(2) {
+                        top: 15px;
+                        left: 75px;
+                        height: 478px;
+                    }
+                }
+
+                .introduction-content {
+                    gap: 12px;
+
+                    .title {
+                        .title-left {
+                            height: 20px;
+                            width: 58px;
+
+                            p {
+                                &.english {
+                                    font-size: 52px;
+                                }
+
+                                &.german {
+                                    font-size: 35px;
+                                }
+                            }
+                        }
+
+                        .title-right {
+                            p:nth-child(1) {
+                                font-size: 40px;
+                            }
+
+                            p:nth-child(2) {
+                                &.english {
+                                    font-size: 33px;
+                                }
+
+                                &.german {
+                                    font-size: 31px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .contact-bar {
+            top: 780px;
+            height: 40px;
+        }
+
+        .scroll-indicator {
+            display: none;
+        }
+    }
+
+    .band img {
+        top: 400px;
+        left: 0px;
+    }
+
+}
+
+@media (max-width:560px) {
+
+    .main-container {
+        margin-bottom: 100px;
+
+        .introduction-container {
+            margin: 0 20px;
+
+            .image-and-introduction-content {
+                .image-container {
+                    img:nth-child(1) {
+                        width: 286px;
+                        height: 350px;
+                        padding-left: 32px;
+                    }
+
+                    img:nth-child(2) {
+                        top: 0px;
+                        left: 0px;
+                        height: 356px;
+                    }
+                }
+
+                .introduction-content {
+                    gap: 12px;
+
+                    .lets-talk-container {
+
+                        button {
+                            font-size: 16px;
+                        }
+                    }
+
+                    .title {
+                        .title-left {
+                            height: 50px;
+                            width: 32px;
+
+                            p {
+                                &.english {
+                                    font-size: 27px;
+                                }
+
+                                &.german {
+                                    font-size: 18px;
+                                }
+                            }
+                        }
+
+                        .title-right {
+                            p:nth-child(1) {
+                                font-size: 28px;
+                                height: 60px;
+                            }
+
+                            p:nth-child(2) {
+                                &.english {
+                                    font-size: 23px;
+                                }
+
+                                &.german {
+                                    font-size: 21px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .contact-bar {
+            top: 590px;
+            height: 40px;
+            gap: 10px;
+            left: -20px;
+
+            .icons {
+                width: 174px;
+            }
+
+            .line {
+                width: 30%;
+            }
+        }
+
+
+    }
+
+    .band img {
+        top: 358px;
+        height: 207px;
+    }
+
+}

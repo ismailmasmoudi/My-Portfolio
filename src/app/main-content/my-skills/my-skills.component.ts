@@ -6,7 +6,8 @@ import { TranslationService } from '../../services/translation.service';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './my-skills.component.html',
-  styleUrl: './my-skills.component.scss'
+  styleUrls: ['./my-skills.component.scss', './my-skills-responsive.component.scss'],
+
 })
 export class MySkillsComponent {
   @ViewChild('skillImage') skillImage!: ElementRef;

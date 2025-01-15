@@ -143,6 +143,7 @@
         .privacy-policy-container {
             margin: 25px 25px;
             margin-right: 25px;
+
             .privacy-policy-title {
                 gap: 12px;
                 margin-bottom: 0;
@@ -153,17 +154,19 @@
                     margin-bottom: 0px;
                 }
             }
+
             h2 {
                 font-size: 20px;
             }
         }
     }
-    .green-shadow{
+
+    .green-shadow {
         top: 450px;
         width: 220px;
         height: 450px;
     }
-   
+
 }
 
 
@@ -171,12 +174,14 @@
     .privacy-policy-content {
         .privacy-policy-container {
             gap: 18px;
+
             .privacy-policy-title {
                 h1 {
                     font-size: 29px;
                     margin-bottom: 0px;
                 }
             }
+
             h2 {
                 font-size: 18px;
             }

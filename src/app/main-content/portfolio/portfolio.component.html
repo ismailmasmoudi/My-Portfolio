@@ -1,74 +1,80 @@
 <div class="portfolio">
-<div class="portfolio-container" id="portfolio">
-    <div class="portfolio-title">
-        <div class="horizontal-line left-line"></div>
-        <p class="portfolio-text">Portfolio</p>
-        <div class="horizontal-line right-line"></div>
-    </div>
-    <p class="portfolio-text">{{ (isGerman$ | async) ? 'Entdecken Sie hier eine Auswahl meiner Arbeiten - Interagieren
-        Sie mit Projekten, um meine Fähigkeiten in Aktion zu sehen.' : 'Explore a selection of my work here - Interact
-        with projects to see my skills in action.' }}</p>
-    <div class="project-containter">
-        <div class="project-item">
-            <img src="img/portfolio/Join.png" alt="Project 1" class="project-image">
-            <div class="project-details">
-                <div class="project-description">
-                    <h2>Join</h2>
-                    <h3>JavaScript | HTML | CSS | Firebase</h3>
-                    <p>{{ (isGerman$ | async) ? 'Aufgabenmanager inspiriert vom Kanban-System. Erstellen und
-                        organisieren Sie Aufgaben per Drag & Drop, weisen Sie Benutzer und Kategorien zu.' : 'Task
-                        manager inspired by the Kanban System. Create and organize tasks using drag and drop functions,
-                        assign users and categories.' }}</p>
-                </div>
-                <div class="project-buttons">
-                    <a href="https://github.com/ismailmasmoudi/EL-POLLO-LOCCO" target="_blank"><button
-                            class="primary-button">Live Test</button></a>
-                    <a href="https://github.com/BorisScheiber/join-294" target="_blank" class="secondary-button">
-                        <button class="secondary-button">Github</button> </a>
+    <div class="portfolio-container" id="portfolio">
+        <div class="portfolio-title">
+            <div class="horizontal-line left-line"></div>
+            <p class="portfolio-text">Portfolio</p>
+            <div class="horizontal-line right-line"></div>
+        </div>
+        <p class="portfolio-text">{{ (isGerman$ | async) ? 'Entdecken Sie hier eine Auswahl meiner Arbeiten -
+            Interagieren
+            Sie mit Projekten, um meine Fähigkeiten in Aktion zu sehen.' : 'Explore a selection of my work here -
+            Interact
+            with projects to see my skills in action.' }}</p>
+        <div class="project-containter">
+            <div class="project-item">
+                <img src="img/portfolio/Join.png" alt="Project 1" class="project-image">
+                <div class="project-details">
+                    <div class="project-description">
+                        <h2>Join</h2>
+                        <h3>JavaScript | HTML | CSS | Firebase</h3>
+                        <p>{{ (isGerman$ | async) ? 'Aufgabenmanager inspiriert vom Kanban-System. Erstellen und
+                            organisieren Sie Aufgaben per Drag & Drop, weisen Sie Benutzer und Kategorien zu.' : 'Task
+                            manager inspired by the Kanban System. Create and organize tasks using drag and drop
+                            functions,
+                            assign users and categories.' }}</p>
+                    </div>
+                    <div class="project-buttons">
+                        <a href="https://github.com/ismailmasmoudi/EL-POLLO-LOCCO" target="_blank"><button
+                                class="primary-button">Live Test</button></a>
+                        <a href="https://github.com/BorisScheiber/join-294" target="_blank" class="secondary-button">
+                            <button class="secondary-button">Github</button> </a>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="project-item responsive-row-reverse">
-            <div class="project-details project-left">
-                <div class="project-description project-left ">
-                    <h2>El Pollo Loco</h2>
-                    <h3>JavaScript | HTML | CSS</h3>
-                    <p>{{ (isGerman$ | async) ? 'Jump, Run und Wurfspiel nach objektorientiertem Ansatz. Hilf Pepe,
-                        Münzen und Tabasco-Sauce zu finden, um gegen die verrückte Henne zu kämpfen.' : 'Jump, run and
-                        throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight
-                        against the crazy hen.' }}</p>
+            <div class="project-item responsive-row-reverse">
+                <div class="project-details project-left">
+                    <div class="project-description project-left ">
+                        <h2>El Pollo Loco</h2>
+                        <h3>JavaScript | HTML | CSS</h3>
+                        <p>{{ (isGerman$ | async) ? 'Jump, Run und Wurfspiel nach objektorientiertem Ansatz. Hilf Pepe,
+                            Münzen und Tabasco-Sauce zu finden, um gegen die verrückte Henne zu kämpfen.' : 'Jump, run
+                            and
+                            throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to
+                            fight
+                            against the crazy hen.' }}</p>
+                    </div>
+                    <div class="project-buttons">
+                        <a href="https://github.com/ismailmasmoudi/EL-POLLO-LOCCO" target="_blank"> <button
+                                class="primary-button">Live Test</button></a>
+                        <a href="https://github.com/ismailmasmoudi/EL-POLLO-LOCCO" target="_blank"> <button
+                                class="secondary-button">Github</button>
+                        </a>
+                    </div>
                 </div>
-                <div class="project-buttons">
-                    <a href="https://github.com/ismailmasmoudi/EL-POLLO-LOCCO" target="_blank"> <button
-                            class="primary-button">Live Test</button></a>
-                    <a href="https://github.com/ismailmasmoudi/EL-POLLO-LOCCO" target="_blank"> <button
-                            class="secondary-button">Github</button>
-                    </a>
-                </div>
+                <img src="img/portfolio/EL-Pollo-loco.png" alt="Project 2" class="project-image">
             </div>
-            <img src="img/portfolio/EL-Pollo-loco.png" alt="Project 2" class="project-image">
-        </div>
 
-        <div class="project-item">
-            <img src="img/portfolio/Pokedex.png" alt="Project 2" class="project-image">
-            <div class="project-details">
-                <div class="project-description">
-                    <h2>Pokédex</h2>
-                    <h3>JavaScript | HTML | CSS | Api</h3>
-                    <p>{{ (isGerman$ | async) ? 'Basierend auf der PokéAPI, einer einfachen Bibliothek, die
-                        Pokemon-Informationen bereitstellt und katalogisiert.' : 'Based on the PokéAPI a simple library
-                        that provides and catalogues pokemon information.' }}</p>
-                </div>
-                <div class="project-buttons">
-                    <a href="https://github.com/ismailmasmoudi/EL-POLLO-LOCCO" target="_blank"> <button
-                            class="primary-button">Live Test</button></a>
-                    <a href="https://github.com/ismailmasmoudi/Pokodex" target="_blank"> <button
-                            class="secondary-button">Github</button></a>
+            <div class="project-item">
+                <img src="img/portfolio/Pokedex.png" alt="Project 2" class="project-image">
+                <div class="project-details">
+                    <div class="project-description">
+                        <h2>Pokédex</h2>
+                        <h3>JavaScript | HTML | CSS | Api</h3>
+                        <p>{{ (isGerman$ | async) ? 'Basierend auf der PokéAPI, einer einfachen Bibliothek, die
+                            Pokemon-Informationen bereitstellt und katalogisiert.' : 'Based on the PokéAPI a simple
+                            library
+                            that provides and catalogues pokemon information.' }}</p>
+                    </div>
+                    <div class="project-buttons">
+                        <a href="https://github.com/ismailmasmoudi/EL-POLLO-LOCCO" target="_blank"> <button
+                                class="primary-button">Live Test</button></a>
+                        <a href="https://github.com/ismailmasmoudi/Pokodex" target="_blank"> <button
+                                class="secondary-button">Github</button></a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 </div>
 <img class="purple-shadow" src="img/portfolio/Purple-shadow.svg" alt="shadow">
