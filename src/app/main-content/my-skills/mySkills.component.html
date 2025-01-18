@@ -1,4 +1,4 @@
-<div class="my-skills-container" id="skills">
+<div class="my-skills-container" id="skills" data-aos="fade-right">
     <div class="second-text-container-with-button-responsive">
         <div class="text-container-without-button-responsive">
             <div class="heading-group" [ngClass]="(isGerman$ | async) ? 'german' : 'english'">
@@ -65,7 +65,7 @@
     </div>
     <div class="skills-description">
         <div class="text-button-container">
-            <div class="text-container"  [ngClass]="(isGerman$ | async) ? 'german' : 'english'"> <h1 [ngClass]="(isGerman$ | async) ? 'german' : 'english'">{{ (isGerman$ | async) ? 'Meine Fähigkeiten' : 'My skills' }}</h1>
+            <div class="text-container"  [ngClass]="(isGerman$ | async) ? 'german' : 'english'"> <h1 [ngClass]="(isGerman$ | async) ? 'german' : 'english'">{{ (isGerman$ | async) ? 'Skills' : 'My skills' }}</h1>
                 <p>{{ (isGerman$ | async) ? 'Ich habe Erfahrung im Aufbau von Projekten mit verschiedenen Frontend-Technologien und -Konzepten gesammelt.' : 'I have gained experience in building projects with different frontend technologies and concepts.' }}</p>
             </div>
             <div class="second-text-container-with-button">

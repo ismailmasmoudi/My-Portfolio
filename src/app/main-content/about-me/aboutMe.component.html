@@ -1,6 +1,6 @@
 <img class="purple-shadow" src="img/Purple-shadow.png" alt="shadow" id="about-me">
-<div class="about-me-container">
-  <div class="about-me-content">
+<div class="about-me-container" >
+  <div class="about-me-content" data-aos="fade-left">
     <div class="text-content">
       <h1>{{ (isGerman$ | async) ? 'Über mich' : 'About me' }}</h1>
       <div class="description-container">
@@ -23,7 +23,7 @@
     </div>
     <div class="graphic-content">
       <div class="circle">
-        <img src="img\ismail.png" alt="mypicture">
+        <img data-aos="zoom-in" src="img\ismail.png" alt="mypicture">
       </div>
       <div class="horizontal-line"></div>
     </div>

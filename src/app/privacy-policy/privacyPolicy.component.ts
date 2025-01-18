@@ -7,8 +7,8 @@ import { CommonModule } from '@angular/common';
   selector: 'app-privacy-policy',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './privacy-policy.component.html',
-  styleUrl: './privacy-policy.component.scss'
+  templateUrl: './privacyPolicy.component.html',
+  styleUrl: './privacyPolicy.component.scss'
 })
 export class PrivacyPolicyComponent {
   translationService = inject(TranslationService);

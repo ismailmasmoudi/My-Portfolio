@@ -72,13 +72,13 @@
                     }
 
                     &.german {
-                        gap: 20px;
+                        gap: 32px;
 
                     }
 
                     h1 {
                         &.german {
-                            font-size: 48px;
+                            font-size: 60px;
                         }
 
                         &.english {
@@ -141,24 +141,6 @@
                 width: 50px;
             }
 
-            .text-button-container {
-                .text-container {
-
-                    &.german {
-                        gap: 10px;
-                    }
-
-                    h1 {
-                        &.german {
-                            font-size: 42px;
-                        }
-
-
-                    }
-
-
-                }
-            }
         }
 
         .images-container {
@@ -245,7 +227,7 @@
 
                     h1 {
                         &.german {
-                            font-size: 21px;
+                            font-size: 45px;
                         }
 
                         &.english {

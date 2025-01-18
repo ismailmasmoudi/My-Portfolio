@@ -174,11 +174,12 @@
     .portfolio {
         display: flex;
         justify-content: end;
-
+        width: 100%;
+        overflow: hidden;
         .project-containter {
             padding: 0 100px;
             margin: 0;
-
+            width:auto;
             .project-item {
                 justify-content: center;
 
@@ -351,6 +352,7 @@
 
     .portfolio {
         .portfolio-container {
+
             padding-top: 100px;
 
             .portfolio-text {

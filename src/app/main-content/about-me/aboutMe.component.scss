@@ -13,11 +13,12 @@
 .about-me-container {
     position: relative;
     width: 100%;
+    overflow: hidden;
 
     .about-me-content {
         display: flex;
         align-items: center;
-        width: 100%;
+        width: auto;
         gap: 40px;
         justify-content: center;
 
@@ -142,8 +143,8 @@
 
     .about-me-container {
         .about-me-content {
-        margin-left: 50px;
-        margin-right: 50px;
+            margin-left: 50px;
+            margin-right: 50px;
 
             .text-content {
                 height: auto;
