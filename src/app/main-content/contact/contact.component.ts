@@ -18,7 +18,7 @@ export class ContactComponent implements OnInit {
   checkboxHover = false;
   checkboxImageUrl = 'img/Check-button.svg';
   showConfirmationLayer = false;
-  mailTest = true;
+  mailTest = false;
   
   /**
     * Injected HttpClient service for making HTTP requests.
@@ -31,7 +31,7 @@ export class ContactComponent implements OnInit {
   }
 
   post = {
-    endPoint: 'https://deineDomain.de/sendMail.php',
+    endPoint: 'https://ismail-masmoudi.com/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
@@ -125,7 +125,9 @@ export class ContactComponent implements OnInit {
 
     if (ngForm.valid) {
       if (!this.mailTest) {
-        this.http.post(this.post.endPoint, this.post.body(this.contactData), this.post.options)
+        this.http.post(this.post.endPoint, this.post.body(this.contactData), {
+          headers: { 'Content-Type': 'application/json' },
+          responseType: 'text' as 'json'})
           .subscribe({
             next: (response) => {
               console.log("Response from server:", response);

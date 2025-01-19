@@ -5,6 +5,6 @@ import { PrivacyPolicyComponent } from './privacy-policy/privacyPolicy.component
 
 export const routes: Routes = [
   { path: '', component: MainContentComponent }, 
-  { path: 'legal-notice', component: LegalNoticeComponent },
-  { path: 'privacy-policy', component: PrivacyPolicyComponent }
+  { path: 'legal-notice', component: LegalNoticeComponent, pathMatch: 'full' },
+  { path: 'privacy-policy', component: PrivacyPolicyComponent , pathMatch: 'full'}
 ];
