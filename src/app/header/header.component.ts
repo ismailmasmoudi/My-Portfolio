@@ -1,11 +1,12 @@
 import { Component, inject ,ChangeDetectorRef} from '@angular/core';
 import {  CommonModule } from '@angular/common';
 import { TranslationService } from '../services/translation.service';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CommonModule ],
+  imports: [CommonModule , RouterLink ],
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
@@ -72,6 +73,14 @@ export class HeaderComponent {
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
+  }
+
+  /**
+  * @method scrollToTop
+  * Scrolls the window to the top smoothly.
+  */
+  scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 }
 
