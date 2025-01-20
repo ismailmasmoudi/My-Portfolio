@@ -14,7 +14,7 @@
     
         <div class="details-container">
             <h2>{{ (isGerman$ | async) ? 'Kontakt:' : 'Contact:' }}</h2>
-            <p>{{ (isGerman$ | async) ? 'E-Mail:' : 'Email:' }} <a href="mailto:ismail-masmoudi7@gmail.com">ismail-masmoudi7&#64;gmail.com</a></p>
+            <p>{{ (isGerman$ | async) ? 'E-Mail:' : 'Email:' }} <a href="mailto:contact@ismail-masmoudi.com">contact&#64;ismail-masmoudi.com</a></p>
         </div>
     
         <div class="details-container">
@@ -61,7 +61,7 @@
             <h2>{{ (isGerman$ | async) ? 'Datenschutz:' : 'Privacy:' }}</h2>
             <p>
                 {{ (isGerman$ | async) ? 'Wir nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Ausführliche Informationen über Art, Umfang und Zweck der Erhebung und Verwendung Ihrer Daten sowie über Ihre Rechte und Einstellungsmöglichkeiten zum Datenschutz entnehmen Sie bitte unserer ausführlichen ' : 'We take the protection of your personal data very seriously. For detailed information about the nature, scope, and purpose of the collection and use of your data, as well as your rights and privacy protection options, please refer to our detailed ' }}
-                 <a routerLink="/privacy-policy">{{ (isGerman$ | async) ? 'Datenschutzerklärung' : 'Privacy Policy' }}</a>.
+                 <a routerLink="/privacy-policy" (click)="scrollToTop()">{{ (isGerman$ | async) ? 'Datenschutzerklärung' : 'Privacy Policy' }}</a>.
             </p>
         </div>
     </div>

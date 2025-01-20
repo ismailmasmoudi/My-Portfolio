@@ -15,4 +15,12 @@ import { RouterLink } from '@angular/router';
 export class LegalNoticeComponent {
   translationService = inject(TranslationService);
   isGerman$ = this.translationService.isGerman$;
+
+   /**
+  * @method scrollToTop
+  * Scrolls the window to the top smoothly.
+  */
+ scrollToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
 }

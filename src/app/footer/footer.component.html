@@ -13,7 +13,7 @@
           <p class="logo-letter" style="color: #fff;">l</p>
         </div>
       </a>
-      <a class="legal-notice" routerLink="/legal-notice">{{ (isGerman$ | async) ? 'Impressum' : 'Legal Notice' }}</a> 
+      <a class="legal-notice" routerLink="/legal-notice" (click)="scrollToTop()">{{ (isGerman$ | async) ? 'Impressum' : 'Legal Notice' }}</a> 
     </div>
     <h3>© Ismail Masmoudi 2025</h3>
     <div class="icons-conatiner">
@@ -21,7 +21,7 @@
         <a href="https://github.com/ismailmasmoudi/" target="_blank" rel="noopener noreferrer">
           <img src="img/github.svg" alt="GitHub">
         </a>
-        <a href="mailto:ismail.masmoudi7@gmail.com" target="_blank" rel="noopener noreferrer">
+        <a href="mailto:contact@ismail.masmoudi.com" target="_blank" rel="noopener noreferrer">
           <img src="img/Email-button.svg" alt="Email">
         </a>
         <a href="https://www.linkedin.com/in/ismail-masmoudi/" target="_blank" rel="noopener noreferrer">
