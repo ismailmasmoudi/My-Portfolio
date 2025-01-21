@@ -80,8 +80,8 @@
             (mouseenter)="checkboxHover = true; updateCheckboxImage()"
             (mouseleave)="checkboxHover = false; updateCheckboxImage()" alt="Privacy Agreement Checkbox"
             style="cursor: pointer;">
-            <p>{{ (isGerman$ | async) ? 'Ich habe die Datenschutzerklärung gelesen und stimme der Verarbeitung meinerDaten wie dort beschrieben zu ' : "I've read the privacy policy and agree to the processing of my data asoutlined " }}
-              <a routerLink="/privacy-policy"
+            <p>{{ (isGerman$ | async) ? 'Ich habe die Datenschutzerklärung gelesen und stimme der Verarbeitung meiner Daten wie dort beschrieben zu ' : "I've read the privacy policy and agree to the processing of my data asoutlined " }}
+              <a routerLink="/privacy-policy" (click)="scrollToTop()"
               style="color: #9747FF; text-decoration: none; cursor: pointer;">{{ (isGerman$ | async) ?
               'Datenschutzerklärung' : 'Privacy Policy' }}</a>.</p>
         </div>

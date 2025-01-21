@@ -124,7 +124,6 @@ export class ContactComponent implements OnInit {
       this.validateForm();
       return;
     }
-
     if (ngForm.valid) {
       if (!this.mailTest) {
         this.http.post(this.post.endPoint, this.post.body(this.contactData), {
@@ -132,8 +131,7 @@ export class ContactComponent implements OnInit {
           responseType: 'text' as 'json'})
           .subscribe({
             next: (response) => {
-              console.log("Response from server:", response);
-              this.showConfirmation();
+              this.showConfirmation(ngForm);
             },
             error: (error) => {
               console.error(error);
@@ -141,8 +139,8 @@ export class ContactComponent implements OnInit {
             },
           });
       } else {
-        console.log('Test mode: Form submitted', this.contactData);
-        this.showConfirmation();
+        this.showConfirmation(ngForm);
+    
       }
     } else {
       this.validateForm();
@@ -155,10 +153,13 @@ export class ContactComponent implements OnInit {
    * @method showConfirmation
    * Displays a confirmation message and reloads the page after a short delay.
    */
-  showConfirmation() {
+  showConfirmation(ngForm: NgForm) {
     this.showConfirmationLayer = true;
     setTimeout(() => {
-      window.location.reload();
+      ngForm.resetForm();
+      this.privacyAgreementChecked = false;
+      this.updateCheckboxImage();
+      this.showConfirmationLayer = false; 
     }, 1500);
   }
 

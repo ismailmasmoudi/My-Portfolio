@@ -28,7 +28,7 @@
           <img src="img/Linkedin-button.svg" alt="LinkedIn"> 
         </a>
       </div>
-      <a class="legal-notice-responsive" routerLink="/legal-notice">{{ (isGerman$ | async) ? 'Impressum' : 'Legal Notice' }}</a> 
+      <a class="legal-notice-responsive" routerLink="/legal-notice" (click)="scrollToTop()">{{ (isGerman$ | async) ? 'Impressum' : 'Legal Notice' }}</a> 
     </div>
   </div>
 </div>
