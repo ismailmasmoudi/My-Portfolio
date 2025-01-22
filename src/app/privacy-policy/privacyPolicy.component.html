@@ -4,7 +4,7 @@
     <div class="privacy-policy-container">
         <div class="privacy-policy-title">
             <div class="horizontal-line"></div>
-            <h1>{{ (isGerman$ | async) ? 'Datenschutzerklärung' : 'Privacy Policy' }}</h1>
+            <h1 [ngClass]="(isGerman$ | async) ? 'german' : 'english'">{{ (isGerman$ | async) ? 'Datenschutzerklärung' : 'Privacy Policy' }}</h1>
         </div>
 
         <div class="details-container">

@@ -14,7 +14,7 @@
     <nav class="main-nav">
       <a routerLink="/"  (click)="scrollToSection('about-me')">{{ (isGerman$ | async) ? 'Über mich' : 'About Me' }}</a>
       <a routerLink="/"  (click)="scrollToSection('skills')">{{ (isGerman$ | async) ? 'Skills' : 'Skills' }}</a>
-      <a routerLink="/"  (click)="scrollToSection('portfolio')">{{ (isGerman$ | async) ? 'Portfolio' : 'Portfolio' }}</a>
+      <a routerLink="/" (click)="scrollToSection('portfolio')">{{ (isGerman$ | async) ? 'Portfolio' : 'Portfolio' }}</a>
       <div class="translation-toggle" (click)="toggleTranslation()">
         <div class="slider" [class.active]="(isGerman$ | async)">
           <img [src]="translationIconSrc" alt="Translate" class="thumb">

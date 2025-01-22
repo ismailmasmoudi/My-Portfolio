@@ -103,12 +103,33 @@
     }
 }
 
+@media (max-width: 1440px) {
+    .privacy-policy-content {
+        .privacy-policy-container {
+            .privacy-policy-title {
+                h1 {
+                    &.german {
+                        font-size: 72px;
+                    }
+                }
+            }
+        }
+    }
 
+
+}
 @media (max-width: 1160px) {
     .privacy-policy-content {
         .privacy-policy-container {
             margin: 50px 50px;
             margin-right: 50px;
+            .privacy-policy-title {
+                h1 {
+                    &.german {
+                        font-size: 50px;
+                    }
+                }
+            }
         }
     }
 
@@ -126,6 +147,11 @@
                 h1 {
                     font-size: 44px;
                     margin-bottom: 0px;
+
+                    &.german {
+                        font-size: 33px;
+
+                    }
                 }
             }
         }
@@ -145,13 +171,18 @@
             margin-right: 25px;
 
             .privacy-policy-title {
-                gap: 12px;
+                gap: 8px;
                 margin-bottom: 0;
-
+                .horizontal-line {
+                    width: 40px;
+                }
                 h1 {
                     font-size: 36px;
-
                     margin-bottom: 0px;
+                    &.german {
+                        font-size: 30px;
+
+                    }
                 }
             }
 
@@ -160,25 +191,30 @@
             }
         }
     }
-
     .green-shadow {
         top: 450px;
         width: 220px;
         height: 450px;
     }
-
 }
 
 
-@media (max-width:400px) {
+@media (max-width:444px) {
     .privacy-policy-content {
         .privacy-policy-container {
-            gap: 18px;
+            gap: 4px;
 
             .privacy-policy-title {
+                .horizontal-line {
+                    width: 28px;
+                }
                 h1 {
-                    font-size: 29px;
+                    font-size: 33px;
                     margin-bottom: 0px;
+                    &.german {
+                        font-size: 21px;
+
+                    }
                 }
             }
 

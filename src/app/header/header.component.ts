@@ -1,12 +1,12 @@
-import { Component, inject ,ChangeDetectorRef} from '@angular/core';
-import {  CommonModule } from '@angular/common';
+import { Component, inject, ChangeDetectorRef } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { TranslationService } from '../services/translation.service';
-import { RouterLink } from '@angular/router';
+import { RouterLink, NavigationExtras, Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CommonModule , RouterLink ],
+  imports: [CommonModule, RouterLink],
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
@@ -15,12 +15,13 @@ export class HeaderComponent {
   isGerman$ = this.translationService.isGerman$;
   showBurgerMenu: boolean = false;
   translationIconSrc: string | undefined;
-   burgerMenuIconSrc: string = 'img/menu.svg';
-   changeDetectorRef = inject(ChangeDetectorRef);
-  constructor() { 
-     this.isGerman$.subscribe(isGerman => {
-       this.translationIconSrc = isGerman ? 'img/translate/german.png' : 'img/translate/english.png';
-     });
+  burgerMenuIconSrc: string = 'img/menu.svg';
+  changeDetectorRef = inject(ChangeDetectorRef);
+  router = inject(Router);
+  constructor() {
+    this.isGerman$.subscribe(isGerman => {
+      this.translationIconSrc = isGerman ? 'img/translate/german.png' : 'img/translate/english.png';
+    });
   }
 
 
@@ -45,17 +46,17 @@ export class HeaderComponent {
     this.showBurgerMenu = !this.showBurgerMenu;
     this.burgerMenuIconSrc = this.showBurgerMenu ? 'img/close.svg' : 'img/menu.svg';
     this.changeDetectorRef.detectChanges();
-      const burgerIcon = document.querySelector('.burger-menu-icon');
-      if (burgerIcon) {
-        burgerIcon.classList.toggle('open');
-      }
+    const burgerIcon = document.querySelector('.burger-menu-icon');
+    if (burgerIcon) {
+      burgerIcon.classList.toggle('open');
+    }
   }
 
 
-   /**
-   * @description Closes the burger menu.
-   * Sets showBurgerMenu to false, resets the burger menu icon, and triggers change detection.
-   */
+  /**
+  * @description Closes the burger menu.
+  * Sets showBurgerMenu to false, resets the burger menu icon, and triggers change detection.
+  */
   closeBurgerMenu() {
     this.showBurgerMenu = false;
     this.burgerMenuIconSrc = 'img/menu.svg';
@@ -63,17 +64,25 @@ export class HeaderComponent {
   }
 
 
-  /**
-   * @description Scrolls to a specific section on the page.
-   * 
-   * @param sectionId - The ID of the section to scroll to.
-   */
-  scrollToSection(sectionId: string): void {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  }
+/**
+ * Scrolls to a specific section on the page after navigating to the current route.
+ * This method uses the Angular Router to navigate to the current route, then uses 
+ * `scrollIntoView` to smoothly scroll to the targeted section. The `setTimeout` 
+ * ensures the DOM is fully updated before attempting to scroll.
+ *
+ * @param sectionId The ID of the HTML element representing the section to scroll to 
+ *                  (e.g., 'about-me', 'skills', 'contact').
+ */
+ scrollToSection(sectionId: string): void {
+  this.router.navigate(['./']).then(() => { 
+    setTimeout(() => {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 0);
+  });}
+
 
   /**
   * @method scrollToTop

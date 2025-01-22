@@ -159,6 +159,10 @@ export class ContactComponent implements OnInit {
       ngForm.resetForm();
       this.privacyAgreementChecked = false;
       this.updateCheckboxImage();
+      Object.keys(this.contactForm.controls).forEach(key => {
+        this.contactForm.controls[key].markAsUntouched(); 
+        this.contactForm.controls[key].markAsPristine(); 
+    });
       this.showConfirmationLayer = false; 
     }, 1500);
   }

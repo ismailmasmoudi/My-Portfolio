@@ -10,9 +10,9 @@
     <h2>{{ (isGerman$ | async) ? 'Haben Sie ein Problem zu lösen?' : 'Got a problem to solve?' }}</h2>
     <div class="details-container">
       <p>{{ (isGerman$ | async) ? 'Kontaktieren Sie mich über dieses Formular, ich freue mich darauf von Ihnen zu hören,
-        Ihre Ideen zu kennen und mit meiner Arbeit zu Ihren Projekten beizutragen.' : 'Contact me through this form, I
+        Ihre Ideen zu kennen zu lernen und mit meiner Arbeit zu Ihren Projekten beizutragen.' : 'Contact me through this form, I
         am interested in hearing from you, knowing your ideas and contributing to your projects with my work.' }}</p>
-      <p>{{ (isGerman$ | async) ? 'Benötigen Sie einen Frontend-Entwickler? ' : 'Need a Frontend developer? ' }} <b>{{
+      <p>{{ (isGerman$ | async) ? 'Frontend Entwickler gesucht?' : 'Need a Frontend developer? ' }} <b>{{
           (isGerman$ | async) ? ' Kontaktieren Sie mich!' : 'Contact me!' }}</b></p>
 
     </div>
@@ -21,7 +21,7 @@
     <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
       <div class="input-container-error-message">
         <div class="input-container">
-          <input [(ngModel)]="contactData.name" minlength="3" type="text" id="name" name="name" pattern="^[a-zA-Z]+(?:\s[a-zA-Z]+){0,2}$"
+          <input [(ngModel)]="contactData.name" minlength="3" type="text" id="name" name="name" pattern="^\s*[a-zA-Z]+(?:\s+[a-zA-Z]+)*\s*$"
             [placeholder]="(isGerman$ | async) ? 'Dein Name..' : 'Your name..'" required #nameInput="ngModel" [ngClass]="{
             'valid': nameInput.valid && nameInput.touched,
             'invalid': nameInput.invalid && nameInput.touched
@@ -80,10 +80,16 @@
             (mouseenter)="checkboxHover = true; updateCheckboxImage()"
             (mouseleave)="checkboxHover = false; updateCheckboxImage()" alt="Privacy Agreement Checkbox"
             style="cursor: pointer;">
-            <p>{{ (isGerman$ | async) ? 'Ich habe die Datenschutzerklärung gelesen und stimme der Verarbeitung meiner Daten wie dort beschrieben zu ' : "I've read the privacy policy and agree to the processing of my data asoutlined " }}
+
+
+
+            <p>{{ (isGerman$ | async) ? 'Ich habe die ' : "I've read the " }}
               <a routerLink="/privacy-policy" (click)="scrollToTop()"
               style="color: #9747FF; text-decoration: none; cursor: pointer;">{{ (isGerman$ | async) ?
-              'Datenschutzerklärung' : 'Privacy Policy' }}</a>.</p>
+              'Datenschutzerklärung' : 'Privacy Policy' }}</a>{{ (isGerman$ | async) ? ' gelesen und stimme der Verarbeitung meiner Daten wie dort beschrieben zu ' : " and agree to the processing of my data as outlined " }} .</p>
+
+
+
         </div>
         <span *ngIf="!privacyAgreementChecked" class="error-message" style="color: rgba(230, 28, 64, 1)">
           {{ (isGerman$ | async) ? 'Bitte akzeptieren Sie die Datenschutzerklärung.' : 'Please accept the privacy policy.' }}

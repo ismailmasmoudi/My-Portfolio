@@ -37,6 +37,8 @@
                     height: 764px;
                     background-color: transparent;
                     padding-left: 100px;
+                    animation: pulse 3s ease-in-out infinite;
+                    animation-iteration-count: infinite;
                 }
 
                 img:nth-child(2) {
@@ -279,3 +281,14 @@
 
 }
 
+@keyframes pulse {
+    0% {
+      transform: scale(1); /* Start at normal size */
+    }
+    50% {
+      transform: scale(1.05); /* Scale up slightly */
+    }
+    100% {
+      transform: scale(1); /* Return to normal size */
+    }
+  }

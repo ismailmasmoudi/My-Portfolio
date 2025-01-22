@@ -8,9 +8,12 @@
 }
 
 ::-webkit-scrollbar {
-  width: 5px; 
+  width: 0px; /* Default width for both, can be omitted */
 }
 
+::-webkit-scrollbar:vertical {
+  width: 5px;  /* Width for vertical scrollbar */
+}
 ::-webkit-scrollbar-track {
   background: #141D2F;
 }
@@ -29,7 +32,7 @@ input:-webkit-autofill:hover,
 input:-webkit-autofill:focus, 
 input:-webkit-autofill:active{
     -webkit-box-shadow: 0 0 0 30px rgba(20, 29, 47, 1) inset !important;
-    -webkit-text-fill-color: #fff !important; // Text color for autofilled fields
+    -webkit-text-fill-color: #fff !important; 
 }
 
 

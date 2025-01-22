@@ -2,11 +2,11 @@
     <div class="second-text-container-with-button-responsive">
         <div class="text-container-without-button-responsive">
             <div class="heading-group" [ngClass]="(isGerman$ | async) ? 'german' : 'english'">
-                <h2 class="heading-style">{{ (isGerman$ | async) ? 'Suchen nach' : 'Looking for' }}</h2>
-                <h2 class="heading-style purple-color">{{ (isGerman$ | async) ? 'einer anderen Fähigkeit' : 'another skill' }}</h2>
+                <h2 class="heading-style">{{ (isGerman$ | async) ? 'auf der Suche nach' : 'Looking for' }}</h2>
+                <h2 class="heading-style purple-color">{{ (isGerman$ | async) ? 'einem anderen Skill' : 'another skill' }}</h2>
                 <h2 class="heading-style">?</h2>
             </div>
-            <p>{{ (isGerman$ | async) ? 'Zögern Sie nicht, mich zu kontaktieren. Ich freue mich darauf, mein bisheriges Wissen zu erweitern.' : 'Feel free to contact me. I look forward to expanding on my previous knowledge.' }}</p>
+            <p>{{ (isGerman$ | async) ? 'Kontaktieren Sie mich gerne. Ich freue mich darauf, mein bisheriges Wissen zu erweitern.' : 'Feel free to contact me. I look forward to expanding on my previous knowledge.' }}</p>
         </div>
         <div class="get-in-touch-container-responsive">
         <button routerLink="/contact" (click)="scrollToSection('contact')" [ngClass]="(isGerman$ | async) ? 'german' : 'english'">{{ (isGerman$ | async) ? 'Kontaktieren Sie mich' : 'Get in touch' }}</button>
@@ -55,7 +55,7 @@
         </div>
         <div class="skills-image" (mouseenter)="onSkillImageHover()" (mouseleave)="onSkillImageLeave()">
             <img #skillImage src="img/skills-icons/11Continually-learning.svg" alt="Continually-learning">
-            <span class="purple-color">{{ (isGerman$ | async) ? 'Ständig lernend' : 'Continually learning' }}</span>
+            <span class="purple-color">{{ (isGerman$ | async) ? 'Kontinuierlich lernen' : 'Continually learning' }}</span>
             <div class="hover-content" *ngIf="showHoverContent">
                 <img class="background-image" [src]="hoverBackgroundImageUrl" alt="Background">
             </div>
